@@ -20,6 +20,22 @@
     />
   </head>
   <body>
+    <section id="popup" class="popup" style="display: none">
+      <div class="close__header-ic" onclick="popupClose()"><img src="assets/images/home/close.png"></div>
+      <form class="form__popup">
+          <div class="popup__form-top">
+              <h2 class="popup__title login">Войти</h2>
+              <h2 class="popup__title register">Регистрация</h2>
+          </div>
+          <div class="form__main">
+              <input type="text" placeholder="Логин" class="login_header login-input" /> <br>
+              <input type="email" placeholder="Email" class="login_header register-input" style="display:none;" /> <br>
+              <input type="password" class="login_header" placeholder="Пароль" /> <br>
+              <button class="poppup_btn">Войти</button>
+          </div>
+  
+      </form>
+  </section>
     <header>
       <div class="header__one">
           <a href="#" class="header__map"><i class='bx bx-map'></i><span class="header__span">Москва</span></a>
@@ -348,6 +364,70 @@
         </div>
       </div>
     </footer>
+    <section id="categories" class="hidden" onmouseover="showCategories()">
+      <div class="trigger">Наведите курсор</div>
+      <div class="categoria__none">
+          <div class="categoria__none-main">
+              <div class="categoria__none-just">
+                  <h2>Популярные категории</h2>
+                  <div class="vse__categor-btn">Все категории</div>
+              </div>
+              <div class="categoria__noneDiv1">
+                  <div class="categoria__div">
+                      <div class="text__cat">Душевые</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor1.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Пиломатериалы</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor2.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Линолеум</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor3.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Обои</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor4.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Инструменты</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor5.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Товары для дачи</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor6.png" alt="catalog"></div>
+                  </div>
+              </div>
+              <div class="categoria__noneDiv1">
+                  <div class="categoria__div">
+                      <div class="text__cat">Окна</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor7.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Двери</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor8.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Сантехника</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor9.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Краски</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor10.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Электротовары</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor11.png" alt="catalog"></div>
+                  </div>
+                  <div class="categoria__div">
+                      <div class="text__cat">Интерьер</div>
+                      <div class="categoria__img"><img src="./assets/images/categ/categor12.png" alt="catalog"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</section>
     <script src="./assets/script/product.js"></script>
+    <script src="./assets/script/popup.js"></script>
   </body>
 </html>
