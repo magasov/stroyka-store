@@ -6,4 +6,4 @@
 <img src="./assets/images/redme-img/redme-mac.jpg" width="600px"/>
 </div> 
 
-
+<!-- просто -->
