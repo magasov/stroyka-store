@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- box-icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/vozvrat.css">
+    <link rel="stylesheet" href="./assets/styles/default.css">
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+</head>
+<body>
+    <section id="popup" class="popup" style="display: none">
+        <div class="close__header-ic" onclick="popupClose()">
+          <img src="assets/images/home/close.png" />
+        </div>
+        <form class="form__popup">
+          <div class="popup__form-top">
+            <h2 class="popup__title login">Войти</h2>
+            <h2 class="popup__title register">Регистрация</h2>
+          </div>
+          <div class="form__main">
+            <input
+              type="text"
+              placeholder="Логин"
+              class="login_header login-input"
+            />
+            <br />
+            <input
+              type="email"
+              placeholder="Email"
+              class="login_header register-input"
+              style="display: none"
+            />
+            <br />
+            <input type="password" class="login_header" placeholder="Пароль" />
+            <br />
+            <button class="poppup_btn">Войти</button>
+          </div>
+        </form>
+      </section>
+      <header>
+        <div class="header__one">
+          <a href="#" class="header__map"
+            ><i class="bx bx-map"></i><span class="header__span">Москва</span></a
+          >
+        </div>
+        <nav class="header__nav">
+          <a href="#">Бренды</a>
+          <a href="#">Доставка</a>
+          <a href="#">Возврат</a>
+          <a href="#">Документация</a>
+          <a href="#">Контакты</a>
+        </nav>
+      </header>
+  
+      <div class="header">
+        <div class="header__navbar">
+          <div class="header__main-one">
+            <a href="#"><img src="./assets/images/home/Logo.svg" alt="Logo" /></a>
+  
+            <a
+              href="#"
+              class="catalog__btn-header"
+              onmouseover="showCategories()"
+              onmouseout="hideCategories()"
+            >
+              <i class="bx bx-menu-alt-left header__btn-catalog"></i>Каталог
+            </a>
+          </div>
+  
+          <div class="header__botom-search">
+            <input type="text" class="header__inp" placeholder="Поиск" />
+            <button class="header__search"><i class="bx bx-search"></i></button>
+          </div>
+          <div class="header__nav-bar">
+            <div class="header__nav-bar1" onclick="popupBlock()">
+              <a href="#"><i class="bx bx-user header_nav-ic"></i></a>
+              <div>Профиль</div>
+            </div>
+            <div class="header__nav-bar1">
+              <a href="#"><i class="bx bx-cube header_nav-ic"></i></a>
+              <div>Заказы</div>
+            </div>
+            <div class="header__nav-bar1">
+              <a href="#"><i class="bx bx-cart header_nav-ic"></i></a>
+              <div>Корзина</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="header__navbar-two">
+          <nav class="navbar_header">
+            <a href="#">Акции</a>
+            <a href="#">Строительные материалы</a>
+            <a href="#">Керамическая плитка</a>
+            <a href="#">Краски</a>
+            <a href="#">Сантехника</a>
+            <a href="#">Напольные покрытия</a>
+            <a href="#">Инструменты</a>
+            <a href="#">Обои</a>
+            <a href="#">Окна</a>
+          </nav>
+        </div>
+      </div>
+    <main>
+            <div class="conteiner">
+                <div class="conteiner-box">
+                    <p class="p">Главная → Возврат</p>
+                    <h1 class="h1">Возврат</h1>
+                    <p class="p1">Ошиблись при выборе товара? Передумали? <br> Ничего страшного! СтройкаСтор в течение 7 дней <br> готова принять обратно или обменять Ваш товар</p>
+                </div>
+            </div>
+    </main>
+            
+    <footer>
+
+    </footer>
+    <script src="./assets/script/popup.js"></script>
+</body>
+</html>

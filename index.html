@@ -1,247 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="./assets/styles/default.css">
-    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/styles/default.css" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
 
     <!-- box-icons -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-</head>
-<body>
-<section id="popup" class="popup" style="display: none">
-    <div class="close__header-ic" onclick="popupClose()"><img src="assets/images/home/close.png"></div>
-    <form class="form__popup">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <section id="popup" class="popup" style="display: none">
+      <div class="close__header-ic" onclick="popupClose()">
+        <img src="assets/images/home/close.png" />
+      </div>
+      <form class="form__popup">
         <div class="popup__form-top">
-            <h2 class="popup__title login">Войти</h2>
-            <h2 class="popup__title register">Регистрация</h2>
+          <h2 class="popup__title login">Войти</h2>
+          <h2 class="popup__title register">Регистрация</h2>
         </div>
         <div class="form__main">
-            <input type="text" placeholder="Логин" class="login_header login-input" /> <br>
-            <input type="email" placeholder="Email" class="login_header register-input" style="display:none;" /> <br>
-            <input type="password" class="login_header" placeholder="Пароль" /> <br>
-            <button class="poppup_btn">Войти</button>
+          <input
+            type="text"
+            placeholder="Логин"
+            class="login_header login-input"
+          />
+          <br />
+          <input
+            type="email"
+            placeholder="Email"
+            class="login_header register-input"
+            style="display: none"
+          />
+          <br />
+          <input type="password" class="login_header" placeholder="Пароль" />
+          <br />
+          <button class="poppup_btn">Войти</button>
         </div>
-
-    </form>
-</section>
+      </form>
+    </section>
     <header>
-        <div class="header__one">
-            <a href="#" class="header__map"><i class='bx bx-map'></i><span class="header__span">Москва</span></a>
-        </div>
-        <nav class="header__nav">
-            <a href="#">Бренды</a>
-            <a href="#">Доставка</a>
-            <a href="#">Возврат</a>
-            <a href="#">Документация</a>
-            <a href="#">Контакты</a>
-        </nav>
+      <div class="header__one">
+        <a href="#" class="header__map"
+          ><i class="bx bx-map"></i><span class="header__span">Москва</span></a
+        >
+      </div>
+      <nav class="header__nav">
+        <a href="#">Бренды</a>
+        <a href="#">Доставка</a>
+        <a href="#">Возврат</a>
+        <a href="#">Документация</a>
+        <a href="#">Контакты</a>
+      </nav>
     </header>
 
     <div class="header">
-        <div class="header__navbar">
-            <div class="header__main-one">
-            <a href="#"><img src="./assets/images/home/Logo.svg" alt="Logo"></a>
+      <div class="header__navbar">
+        <div class="header__main-one">
+          <a href="#"><img src="./assets/images/home/Logo.svg" alt="Logo" /></a>
 
-            <a href="#" class="catalog__btn-header" onmouseover="showCategories()" onmouseout="hideCategories()">
-                <i class='bx bx-menu-alt-left header__btn-catalog'></i>Каталог
-            </a>
-            
-            </div>
-
-                <div class="header__botom-search">
-                    <input type="text" class="header__inp" placeholder="Поиск">
-                    <button class="header__search"><i class='bx bx-search'></i></button>
-                </div>
-            <div class="header__nav-bar">
-                <div class="header__nav-bar1" onclick="popupBlock()">
-                    <a href="#"><i class='bx bx-user header_nav-ic'></i></a>
-                    <div>Профиль</div>
-                </div>
-                <div class="header__nav-bar1">
-                    <a href="#"><i class='bx bx-cube header_nav-ic' ></i></a>
-                    <div>Заказы</div>
-                </div>
-                <div class="header__nav-bar1">
-                    <a href="#"><i class='bx bx-cart header_nav-ic'></i></a>
-                    <div>Корзина</div>
-                </div>
-            </div>
+          <a
+            href="#"
+            class="catalog__btn-header"
+            onmouseover="showCategories()"
+            onmouseout="hideCategories()"
+          >
+            <i class="bx bx-menu-alt-left header__btn-catalog"></i>Каталог
+          </a>
         </div>
 
-        <div class="header__navbar-two">
-            <nav class="navbar_header">
-                <a href="#">Акции</a>
-                <a href="#">Строительные материалы</a>
-                <a href="#">Керамическая плитка</a>
-                <a href="#">Краски</a>
-                <a href="#">Сантехника</a>
-                <a href="#">Напольные покрытия</a>
-                <a href="#">Инструменты</a>
-                <a href="#">Обои</a>
-                <a href="#">Окна</a>
-            </nav>
+        <div class="header__botom-search">
+          <input type="text" class="header__inp" placeholder="Поиск" />
+          <button class="header__search"><i class="bx bx-search"></i></button>
         </div>
+        <div class="header__nav-bar">
+          <div class="header__nav-bar1" onclick="popupBlock()">
+            <a href="#"><i class="bx bx-user header_nav-ic"></i></a>
+            <div>Профиль</div>
+          </div>
+          <div class="header__nav-bar1">
+            <a href="#"><i class="bx bx-cube header_nav-ic"></i></a>
+            <div>Заказы</div>
+          </div>
+          <div class="header__nav-bar1">
+            <a href="#"><i class="bx bx-cart header_nav-ic"></i></a>
+            <div>Корзина</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__navbar-two">
+        <nav class="navbar_header">
+          <a href="#">Акции</a>
+          <a href="#">Строительные материалы</a>
+          <a href="#">Керамическая плитка</a>
+          <a href="#">Краски</a>
+          <a href="#">Сантехника</a>
+          <a href="#">Напольные покрытия</a>
+          <a href="#">Инструменты</a>
+          <a href="#">Обои</a>
+          <a href="#">Окна</a>
+        </nav>
+      </div>
     </div>
-
+    <!-- sdfsdff -->
     <main>
-        <section class="home">
-            <div class="wrapper">
-                <input checked style="display: none" type=radio name="slider" id="slide1" />
-                <input type=radio style="display: none" name="slider" id="slide2" />
+      <section class="home">
+        <div class="wrapper">
+          <input
+            checked
+            style="display: none"
+            type="radio"
+            name="slider"
+            id="slide1"
+          />
+          <input type="radio" style="display: none" name="slider" id="slide2" />
 
-                <div class="slider-wrapper">
-                    <div class=inner>
-                        <article>
-                            <div class="info">
-                                <h1>Специальные <br> предложения</h1>
-                                <p>на строительные материалы <br> и товары для ремонта</p>
-                                <a href="#" class="header__baner-btn">Подробнее</a>
-                            </div>
-                            <img src="./assets/images/home/banner1.jpg" />
-                        </article>
-                        <article>
-                            <div class="info">
-                                <h1>Специальные <br> предложения</h1>
-                                <p>на строительные материалы <br> и товары для ремонта</p>
-                                <a href="#" class="header__baner-btn">Подробнее</a>
-                            </div>
-                            <img src="./assets/images/home/banner2.jpg" />
-                        </article>
-                    </div>
+          <div class="slider-wrapper">
+            <div class="inner">
+              <article>
+                <div class="info">
+                  <h1>
+                    Специальные <br />
+                    предложения
+                  </h1>
+                  <p>
+                    на строительные материалы <br />
+                    и товары для ремонта
+                  </p>
+                  <a href="#" class="header__baner-btn">Подробнее</a>
                 </div>
-                <div class="slider-prev-next-control">
-                    <label for=slide1></label>
-                    <label for=slide2></label>
+                <img src="./assets/images/home/banner1.jpg" />
+              </article>
+              <article>
+                <div class="info">
+                  <h1>
+                    Специальные <br />
+                    предложения
+                  </h1>
+                  <p>
+                    на строительные материалы <br />
+                    и товары для ремонта
+                  </p>
+                  <a href="#" class="header__baner-btn">Подробнее</a>
                 </div>
-                <div class="slider-dot-control">
-                    <label for=slide1></label>
-                    <label for=slide2></label>
-                </div>
+                <img src="./assets/images/home/banner2.jpg" />
+              </article>
             </div>
-        </section>
+          </div>
+          <div class="slider-prev-next-control">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+          </div>
+          <div class="slider-dot-control">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+          </div>
+        </div>
+      </section>
 
-        <section id="aktsiya" class="aktsiya">
-            <div class="justify__h1">
-                <h2>Акции</h2>
-                <div class="btn__vseActsia">Все акции <i class='bx bx-chevron-right' style="padding-top: 2px;"></i></div>
-            </div><br>
-            <div class="aktsia__main-one">
-                <div class="aktsia__main-one1">
-                    <div class="aktsia__main-product-img"><img src="./assets/images/aktsia/home1.png"></div>
-                    <div class="aktsia__main-product">
-                        <div class="aktsia__main-product-h1">Рубероид РКП-350 ТУ, размер <br> материала 1 х 10 м (10м2, 1 рулон)</div>
-                        <div class="aktsia__main-product-price">
-                            <div class="price__new">449 ₽</div>
-                            <div class="price__star">499 ₽</div>
-                        </div>
-                        <div class="aktsia__main-product-btn">В корзину</div>
-                    </div>
-                </div>
-                <div class="aktsia__main-one1">
-                    <div class="aktsia__main-product-img"><img src="./assets/images/aktsia/home2.png"></div>
-                    <div class="aktsia__main-product">
-                        <div class="aktsia__main-product-h1">Пена монтажная ТЕХНОНИКОЛЬ <br> MASTER 65 профессиональная <br> всесезонная</div>
-                        <div class="aktsia__main-product-price">
-                            <div class="price__new">495 ₽</div>
-                            <div class="price__star">660 ₽</div>
-                        </div>
-                        <div class="aktsia__main-product-btn">В корзину</div>
-                    </div>
-                </div>
+      <section id="aktsiya" class="aktsiya">
+        <div class="justify__h1">
+          <h2>Акции</h2>
+          <div class="btn__vseActsia">
+            Все акции
+            <i class="bx bx-chevron-right" style="padding-top: 2px"></i>
+          </div>
+        </div>
+        <br />
+        <div class="aktsia__main-one">
+          <div class="aktsia__main-one1">
+            <div class="aktsia__main-product-img">
+              <img src="./assets/images/aktsia/home1.png" />
             </div>
-            <div class="aktsia__main-one">
-                <div class="aktsia__main-one1">
-                    <div class="aktsia__main-product-img"><img src="./assets/images/aktsia/home3.png"></div>
-                    <div class="aktsia__main-product">
-                        <div class="aktsia__main-product-h1">Сетка "Рабица" яч. 50х50/1,5х10 <br> м-ОЦ</div>
-                        <div class="aktsia__main-product-price price_akts">
-                            <div class="price__new">1499 ₽</div>
-                            <div class="price__star">1890 ₽</div>
-                        </div>
-                        <div class="aktsia__main-product-btn">В корзину</div>
-                    </div>
-                </div>
-                <div class="aktsia__main-one1">
-                    <div class="aktsia__main-product-img"><img src="./assets/images/aktsia/home4.png"></div>
-                    <div class="aktsia__main-product">
-                        <div class="aktsia__main-product-h1">Металлочерепица, цвет <br> коричневый, 1.18 х 1.15 м</div>
-                        <div class="aktsia__main-product-price">
-                            <div class="price__new">769 ₽</div>
-                            <div class="price__star">999 ₽</div>
-                        </div>
-                        <div class="aktsia__main-product-btn">В корзину</div>
-                    </div>
-                </div>
+            <div class="aktsia__main-product">
+              <div class="aktsia__main-product-h1">
+                Рубероид РКП-350 ТУ, размер <br />
+                материала 1 х 10 м (10м2, 1 рулон)
+              </div>
+              <div class="aktsia__main-product-price">
+                <div class="price__new">449 ₽</div>
+                <div class="price__star">499 ₽</div>
+              </div>
+              <div class="aktsia__main-product-btn">В корзину</div>
             </div>
-        </section>
-            <section id="categories" class="hidden" onmouseover="showCategories()">
-                <div class="trigger">Наведите курсор</div>
-                <div class="categoria__none">
-                    <div class="categoria__none-main">
-                        <div class="categoria__none-just">
-                            <h2>Популярные категории</h2>
-                            <div class="vse__categor-btn">Все категории</div>
-                        </div>
-                        <div class="categoria__noneDiv1">
-                            <div class="categoria__div">
-                                <div class="text__cat">Душевые</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor1.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Пиломатериалы</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor2.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Линолеум</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor3.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Обои</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor4.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Инструменты</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor5.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Товары для дачи</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor6.png" alt="catalog"></div>
-                            </div>
-                        </div>
-                        <div class="categoria__noneDiv1">
-                            <div class="categoria__div">
-                                <div class="text__cat">Окна</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor7.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Двери</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor8.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Сантехника</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor9.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Краски</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor10.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Электротовары</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor11.png" alt="catalog"></div>
-                            </div>
-                            <div class="categoria__div">
-                                <div class="text__cat">Интерьер</div>
-                                <div class="categoria__img"><img src="./assets/images/categ/categor12.png" alt="catalog"></div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="aktsia__main-one1">
+            <div class="aktsia__main-product-img">
+              <img src="./assets/images/aktsia/home2.png" />
+            </div>
+            <div class="aktsia__main-product">
+              <div class="aktsia__main-product-h1">
+                Пена монтажная ТЕХНОНИКОЛЬ <br />
+                MASTER 65 профессиональная <br />
+                всесезонная
+              </div>
+              <div class="aktsia__main-product-price">
+                <div class="price__new">495 ₽</div>
+                <div class="price__star">660 ₽</div>
+              </div>
+              <div class="aktsia__main-product-btn">В корзину</div>
+            </div>
+          </div>
+        </div>
+        <div class="aktsia__main-one">
+          <div class="aktsia__main-one1">
+            <div class="aktsia__main-product-img">
+              <img src="./assets/images/aktsia/home3.png" />
+            </div>
+            <div class="aktsia__main-product">
+              <div class="aktsia__main-product-h1">
+                Сетка "Рабица" яч. 50х50/1,5х10 <br />
+                м-ОЦ
+              </div>
+              <div class="aktsia__main-product-price price_akts">
+                <div class="price__new">1499 ₽</div>
+                <div class="price__star">1890 ₽</div>
+              </div>
+              <div class="aktsia__main-product-btn">В корзину</div>
+            </div>
+          </div>
+          <div class="aktsia__main-one1">
+            <div class="aktsia__main-product-img">
+              <img src="./assets/images/aktsia/home4.png" />
+            </div>
+            <div class="aktsia__main-product">
+              <div class="aktsia__main-product-h1">
+                Металлочерепица, цвет <br />
+                коричневый, 1.18 х 1.15 м
+              </div>
+              <div class="aktsia__main-product-price">
+                <div class="price__new">769 ₽</div>
+                <div class="price__star">999 ₽</div>
+              </div>
+              <div class="aktsia__main-product-btn">В корзину</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="categories" class="hidden" onmouseover="showCategories()">
+        <div class="trigger">Наведите курсор</div>
+        <div class="categoria__none">
+          <div class="categoria__none-main">
+            <div class="categoria__none-just">
+              <h2>Популярные категории</h2>
+              <div class="vse__categor-btn">Все категории</div>
+            </div>
+            <div class="categoria__noneDiv1">
+              <div class="categoria__div">
+                <div class="text__cat">Душевые</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor1.png" alt="catalog" />
                 </div>
-        </section>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Пиломатериалы</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor2.png" alt="catalog" />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Линолеум</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor3.png" alt="catalog" />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Обои</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor4.png" alt="catalog" />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Инструменты</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor5.png" alt="catalog" />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Товары для дачи</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor6.png" alt="catalog" />
+                </div>
+              </div>
+            </div>
+            <div class="categoria__noneDiv1">
+              <div class="categoria__div">
+                <div class="text__cat">Окна</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor7.png" alt="catalog" />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Двери</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor8.png" alt="catalog" />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Сантехника</div>
+                <div class="categoria__img">
+                  <img src="./assets/images/categ/categor9.png" alt="catalog" />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Краски</div>
+                <div class="categoria__img">
+                  <img
+                    src="./assets/images/categ/categor10.png"
+                    alt="catalog"
+                  />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Электротовары</div>
+                <div class="categoria__img">
+                  <img
+                    src="./assets/images/categ/categor11.png"
+                    alt="catalog"
+                  />
+                </div>
+              </div>
+              <div class="categoria__div">
+                <div class="text__cat">Интерьер</div>
+                <div class="categoria__img">
+                  <img
+                    src="./assets/images/categ/categor12.png"
+                    alt="catalog"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- s -->
     <script src="./assets/script/popup.js"></script>
-</body>
+  </body>
 </html>
+<!--  -->
