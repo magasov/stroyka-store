@@ -1,0 +1,76 @@
+.brand {
+    width: 100%;
+    margin: 0 auto;
+    height: 232px;
+    background-size: cover;
+    background-position: center;
+    background: url(../images/brand/banner__brand.jpg);
+    padding: 40px 8%;
+}
+
+.brand__h1 {
+    display: flex;
+    column-gap: 10px;
+}
+
+.brand__h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.popular {
+    width: 100%;
+    padding: 60px 8%;
+}
+
+.popular__brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h1_popular-brand {
+    font-size: 34px;
+    font-weight: 600;
+    color: #2F323A;
+}
+
+.btn_popular-brand {
+    width: 174px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D1D1D3;
+    color: #171B24;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.btn_popular-brand:hover {
+    background: #2F323A;
+    color: #FFFFFF;
+    transition: all .3s ease;
+}
+
+.popular__block-one {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.popular__block1 {
+    margin: 10px 0;
+    width: 180px;
+    height: 124px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E8E9EA;
+}
+
+.popular__block1:hover {
+    border: 1px solid #2F323A;
+}
