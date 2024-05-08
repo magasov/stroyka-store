@@ -730,3 +730,27 @@ footer {
     align-items: center;
     column-gap: 3px;
 }
+
+.popular__tovar {
+    width: 100%;
+    padding: 100px 8%;
+}
+
+.popular__tovar-one {
+    display: flex;
+    justify-content: center;
+}
+
+
+.popular__tovar-block {
+    width: 278px;
+    height: 416px;
+    background: #E8E9EA;
+    margin: 10px;
+}
+
+.h2__popul-tovar {
+    font-size: 34px;
+    color: #2F323A;
+    font-weight: 600;
+}
