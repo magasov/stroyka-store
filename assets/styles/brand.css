@@ -74,3 +74,34 @@
 .popular__block1:hover {
     border: 1px solid #2F323A;
 }
+
+.brand__abc {
+    width: 100%;
+    padding: 10px 8%;
+}
+
+.brand__abc-catalog {
+    display: flex;
+    width: 100%;
+    column-gap: 8px;
+    padding: 5px 0;
+}
+
+.bukva {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #D1D1D3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #171B24;
+}
+
+.bukva:focus{
+    background: #FBE303;
+}
+
+.vse-bucva {
+    width: 60px;
+}
