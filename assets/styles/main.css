@@ -812,6 +812,7 @@ footer {
     transition: all .3s ease;
     position: relative;
     top: 55px;
+    cursor: pointer;
 }
 
 .btn__product:hover {

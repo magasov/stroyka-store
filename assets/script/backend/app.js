@@ -20,22 +20,42 @@ let products = [
         price: "335 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular1.png",
+        image: "./assets/images/home/popular/popular5.png",
         name: "Керамогранит Yasmin 598х185 коричневый C-YA4M112D",
         price: "899 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular2.png",
+        image: "./assets/images/home/popular/popular6.png",
         name: "Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг",
         price: "275 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular3.png",
+        image: "./assets/images/home/popular/popular7.png",
         name: "Грунтовка Старатели 10л глубокого проникновения",
         price: "839 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular4.png",
+        image: "./assets/images/home/popular/popular8.png",
+        name: "Гипсокартон Волма, 2500 х 1200 х 12,5 мм",
+        price: "335 ₽"
+    },
+    {
+        image: "./assets/images/home/popular/popular9.png",
+        name: "Керамогранит Yasmin 598х185 коричневый C-YA4M112D",
+        price: "899 ₽"
+    },
+    {
+        image: "./assets/images/home/popular/popular10.png",
+        name: "Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг",
+        price: "275 ₽"
+    },
+    {
+        image: "./assets/images/home/popular/popular11.png",
+        name: "Грунтовка Старатели 10л глубокого проникновения",
+        price: "839 ₽"
+    },
+    {
+        image: "./assets/images/home/popular/popular12.png",
         name: "Гипсокартон Волма, 2500 х 1200 х 12,5 мм",
         price: "335 ₽"
     },
