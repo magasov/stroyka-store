@@ -79,17 +79,17 @@ products.forEach(product => {
     productsContainer.innerHTML += productHTML;
 });
 
-function addToCart(name, price) {
+function addToCart(productName, productPrice) {
     fetch('/addToCart', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, price })
+        body: JSON.stringify({ name: productName, price: productPrice })
     })
         .then(response => {
             if (response.ok) {
-                alert('Товар добавлен в корзину!');
+                window.location.href = '/cat.html'; // Перенаправление на страницу cat.html
             } else {
                 throw new Error('Ошибка при добавлении товара в корзину');
             }
