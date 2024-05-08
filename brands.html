@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stroyka-store - Бренды</title>
+    <link rel="stylesheet" href="./assets/styles/default.css" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./assets/styles/brand.css">
+
+    <!-- box-icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="shortcut icon" href="./assets/images/favicion/fav.png" type="image/x-icon">
+  </head>
+<body>
+    <section id="popup" class="popup" style="display: none">
+        <div class="close__header-ic" onclick="popupClose()">
+          <img src="assets/images/home/close.png" />
+        </div>
+        <form class="form__popup">
+          <div class="popup__form-top">
+            <h2 class="popup__title login">Войти</h2>
+            <h2 class="popup__title register">Регистрация</h2>
+          </div>
+          <div class="form__main">
+            <input
+              type="text"
+              placeholder="Логин"
+              class="login_header login-input"
+            />
+            <br />
+            <input
+              type="email"
+              placeholder="Email"
+              class="login_header register-input"
+              style="display: none"
+            />
+            <br />
+            <input type="password" class="login_header" placeholder="Пароль" />
+            <br />
+            <button class="poppup_btn">Войти</button>
+          </div>
+        </form>
+      </section>
+      <header>
+        <div class="header__one">
+          <a href="#" class="header__map"
+            ><i class="bx bx-map"></i><span class="header__span">Москва</span></a
+          >
+        </div>
+        <nav class="header__nav">
+          <a href="#">Бренды</a>
+          <a href="#">Доставка</a>
+          <a href="#">Возврат</a>
+          <a href="#">Документация</a>
+          <a href="#">Контакты</a>
+        </nav>
+      </header>
+  
+      <div class="header">
+        <div class="header__navbar">
+          <div class="header__main-one">
+            <a href="#"><img src="./assets/images/home/Logo.svg" alt="Logo" /></a>
+  
+            <a
+              href="#"
+              class="catalog__btn-header"
+              onclick="toggleCategories()"
+          >
+              <i class="bx bx-menu-alt-left header__btn-catalog"></i>Каталог
+          </a>
+          </div>
+  
+          <div class="header__botom-search">
+            <input type="text" class="header__inp" placeholder="Поиск" />
+            <button class="header__search"><i class="bx bx-search"></i></button>
+          </div>
+          <div class="header__nav-bar">
+            <div class="header__nav-bar1" onclick="popupBlock()">
+              <a href="#"><i class="bx bx-user header_nav-ic"></i></a>
+              <div>Профиль</div>
+            </div>
+            <div class="header__nav-bar1">
+              <a href="#"><i class="bx bx-cube header_nav-ic"></i></a>
+              <div>Заказы</div>
+            </div>
+            <div class="header__nav-bar1">
+              <a href="#"><i class="bx bx-cart header_nav-ic"></i></a>
+              <div>Корзина</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="header__navbar-two">
+          <nav class="navbar_header">
+            <a href="#">Акции</a>
+            <a href="#">Строительные материалы</a>
+            <a href="#">Керамическая плитка</a>
+            <a href="#">Краски</a>
+            <a href="#">Сантехника</a>
+            <a href="#">Напольные покрытия</a>
+            <a href="#">Инструменты</a>
+            <a href="#">Обои</a>
+            <a href="#">Окна</a>
+          </nav>
+        </div>
+      </div>
+      
+
+      <main>
+        <section id="categories" class="hidden" onmouseover="showCategories()">
+          <div class="trigger">Наведите курсор</div>
+          <div class="categoria__none">
+            <div class="categoria__none-main">
+              <div class="categoria__none-just">
+                <h2>Популярные категории</h2>
+                <div class="vse__categor-btn">Все категории</div>
+              </div>
+              <div class="categoria__noneDiv1">
+                <div class="categoria__div">
+                  <div class="text__cat">Душевые</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor1.png" alt="catalog" />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Пиломатериалы</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor2.png" alt="catalog" />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Линолеум</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor3.png" alt="catalog" />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Обои</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor4.png" alt="catalog" />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Инструменты</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor5.png" alt="catalog" />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Товары для дачи</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor6.png" alt="catalog" />
+                  </div>
+                </div>
+              </div>
+              <div class="categoria__noneDiv1">
+                <div class="categoria__div">
+                  <div class="text__cat">Окна</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor7.png" alt="catalog" />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Двери</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor8.png" alt="catalog" />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Сантехника</div>
+                  <div class="categoria__img">
+                    <img src="./assets/images/categ/categor9.png" alt="catalog" />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Краски</div>
+                  <div class="categoria__img">
+                    <img
+                      src="./assets/images/categ/categor10.png"
+                      alt="catalog"
+                    />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Электротовары</div>
+                  <div class="categoria__img">
+                    <img
+                      src="./assets/images/categ/categor11.png"
+                      alt="catalog"
+                    />
+                  </div>
+                </div>
+                <div class="categoria__div">
+                  <div class="text__cat">Интерьер</div>
+                  <div class="categoria__img">
+                    <img
+                      src="./assets/images/categ/categor12.png"
+                      alt="catalog"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+            <br>
+          <section id="brand" class="brand">
+            <div class="brand__h1">
+                <a href="index.html">Главная</a>
+                <p>Доставка</p>
+            </div>
+            <h1 class="brand__h2">Все бренды</h1>
+          </section>
+
+          <section class="popular">
+            <div class="popular__brand">
+                <div class="h1_popular-brand">Популярные бренды</div>
+                <div class="btn_popular-brand">Все бренды</div>
+            </div>
+                <br>
+            <div class="popular__brand-block">
+                <div class="popular__block-one">
+                    <div class="popular__block1"><img src="./assets/images/brand/popular1.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular2.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular3.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular4.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular5.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular6.png" alt="popular"></div>
+                </div>
+                <div class="popular__block-one">
+                    <div class="popular__block1"><img src="./assets/images/brand/popular7.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular8.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular9.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular10.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular11.png" alt="popular"></div>
+                    <div class="popular__block1"><img src="./assets/images/brand/popular12.png" alt="popular"></div>
+                </div>
+            </div>
+          </section>
+
+          <section class="brand__abc">
+              <div class="brand__abc-catalog">
+                <a href="#" class="bukva vse-bucva buc__active">Все</a>
+                <a href="#" class="bukva">A</a>
+                <a href="#" class="bukva">B</a>
+                <a href="#" class="bukva">C</a>
+                <a href="#" class="bukva">D</a>
+                <a href="#" class="bukva">E</a>
+                <a href="#" class="bukva">F</a>
+                <a href="#" class="bukva">G</a>
+                <a href="#" class="bukva">H</a>
+                <a href="#" class="bukva">I</a>
+                <a href="#" class="bukva">J</a>
+                <a href="#" class="bukva">K</a>
+                <a href="#" class="bukva">L</a>
+                <a href="#" class="bukva">M</a>
+                <a href="#" class="bukva">N</a>
+                <a href="#" class="bukva">O</a>
+                <a href="#" class="bukva">P</a>
+                <a href="#" class="bukva">Q</a>
+                <a href="#" class="bukva">R</a>
+                <a href="#" class="bukva">S</a>
+                <a href="#" class="bukva">T</a>
+                <a href="#" class="bukva">U</a>
+                <a href="#" class="bukva">V</a>
+                <a href="#" class="bukva">W</a>
+                <a href="#" class="bukva">Z</a>
+              </div>
+              <div class="brand__abc-catalog">
+                <a href="#" class="bukva">А</a>
+                <a href="#" class="bukva">Б</a>
+                <a href="#" class="bukva">Г</a>
+                <a href="#" class="bukva">Д</a>
+                <a href="#" class="bukva">Е</a>
+                <a href="#" class="bukva">Ж</a>
+                <a href="#" class="bukva">З</a>
+                <a href="#" class="bukva">И</a>
+                <a href="#" class="bukva">К</a>
+                <a href="#" class="bukva">Л</a>
+                <a href="#" class="bukva">М</a>
+                <a href="#" class="bukva">Н</a>
+                <a href="#" class="bukva">О</a>
+                <a href="#" class="bukva">П</a>
+                <a href="#" class="bukva">Р</a>
+                <a href="#" class="bukva">С</a>
+                <a href="#" class="bukva">Т</a>
+                <a href="#" class="bukva">У</a>
+                <a href="#" class="bukva">Ф</a>
+                <a href="#" class="bukva">Ш</a>
+                <a href="#" class="bukva">Э</a>
+                <a href="#" class="bukva">Я</a>
+              </div>
+          </section>
+            <br>
+          <section class="brands__div">
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">A</a>
+              <nav class="brands_cat-a">
+                <a href="#">ASB-Woodline</a> <br>
+                <a href="#">Apecs</a><br>
+                <a href="#">Azario</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">AVS</a><br>
+                <a href="#">Appetite</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Alma Ceramica</a><br>
+                <a href="#">Attribute</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Alvaro-Banos</a><br>
+                <a href="#">Auto Standart</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Am.Pm</a><br>
+                <a href="#">Axima</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">B</a>
+              <nav class="brands_cat-a">
+                <a href="#">BLB</a> <br>
+                <a href="#">Belinka</a><br>
+                <a href="#">Bussare</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">BOYSCOUT</a><br>
+                <a href="#">Blocker</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">BRAVAT</a><br>
+                <a href="#">Bosch</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Belani</a><br>
+                <a href="#">Bostik</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Belezza</a><br>
+                <a href="#">Braver</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">C</a>
+              <nav class="brands_cat-a">
+                <a href="#">Cemmix</a> <br>
+                <a href="#">Ceresit</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Ceramica Konskie</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Ceramica Konskie</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Ceresit</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Ceresit</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">D</a>
+              <nav class="brands_cat-a">
+                <a href="#">DAP</a> <br>
+                <a href="#">Docke</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">DARIIS</a><br>
+                <a href="#">Dora</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Damixa</a><br>
+                <a href="#">Dufa</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Deco Room</a><br>
+                <a href="#">Dulux</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Decoretto</a><br>
+                <a href="#">Duschy</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">E</a>
+              <nav class="brands_cat-a">
+                <a href="#">EKF</a> <br>
+                <a href="#">Elfe</a><br>
+                <a href="#">Estima</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">ESKO</a><br>
+                <a href="#">Elysium</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">EUROTEX</a><br>
+                <a href="#">Energizer</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Egger</a><br>
+                <a href="#">Energy</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Element</a><br>
+                <a href="#">Erismann</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">F</a>
+              <nav class="brands_cat-a">
+                <a href="#">Fischer</a> <br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Fora</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">G</a>
+              <nav class="brands_cat-a">
+                <a href="#">GP BATTERIES</a><br>
+                <a href="#">Giaretti</a><br>
+                <a href="#">Gracia Ceramica</a><br>
+                <a href="#">Grohe</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">GRANICOM</a><br>
+                <a href="#">Gimi</a><br>
+                <a href="#">Grinda</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">GSHOSE</a><br>
+                <a href="#">GlobalTile</a><br>
+                <a href="#">Grohe</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Gauss</a><br>
+                <a href="#">Golden Tile</a><br>
+                <a href="#">Gracia Ceramica</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Gayafores</a><br>
+                <a href="#">Goldman</a><br>
+                <a href="#">Grinda</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">H</a>
+              <nav class="brands_cat-a">
+                <a href="#">HARO</a> <br>
+                <a href="#">Hobby</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">HEGEL</a><br>
+                <a href="#">Home Color</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">HELP</a><br>
+                <a href="#">Husky</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">HENKEL</a><br>
+                <a href="#">Huter</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Hammer</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">I</a>
+              <nav class="brands_cat-a">
+                <a href="#">IEK</a> <br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">IKA</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">IVC</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Ideal</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">J</a>
+              <nav class="brands_cat-a">
+                <a href="#">Jika</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">K</a>
+              <nav class="brands_cat-a">
+                <a href="#">KLEO</a> <br>
+                <a href="#">Komar</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Karcher</a><br>
+                <a href="#">Kraftool</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Kerama Marazzi</a><br>
+                <a href="#">Krass</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Kiilto</a><br>
+                <a href="#">Kronostar</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Kolner</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">L</a>
+              <nav class="brands_cat-a">
+                <a href="#">LUX</a> <br>
+                <a href="#">Lemax</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">LaFavola</a><br>
+                <a href="#">Leonord</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Lasselsberger</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Legrand</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Lemark</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">M</a>
+              <nav class="brands_cat-a">
+                <a href="#">METALTEX</a> <br>
+                <a href="#">Marburg</a><br>
+                <a href="#">Milardo</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">MONETA</a><br>
+                <a href="#">Marmiton</a><br>
+                <a href="#">Monopole</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Makel</a><br>
+                <a href="#">Marshall</a><br>
+                <a href="#">Murol</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Makita</a><br>
+                <a href="#">Matrix</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Mallony</a><br>
+                <a href="#">Meiwa Gravure Co., Ltd</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">N</a>
+              <nav class="brands_cat-a">
+                <a href="#">NRAVA HOME</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Norta</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">O</a>
+              <nav class="brands_cat-a">
+                <a href="#">OLFA</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">P</a>
+              <nav class="brands_cat-a">
+                <a href="#">P&P</a> <br>
+                <a href="#">Pasabahce</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">PALLADIUM</a><br>
+                <a href="#">Phibo</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">PROSEPT</a><br>
+                <a href="#">Plast team</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Palisad</a><br>
+                <a href="#">Polynor</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Park</a><br>
+                <a href="#">Power Cube</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Q</a>
+              <nav class="brands_cat-a">
+                <a href="#">Quick-Step</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">R</a>
+              <nav class="brands_cat-a">
+                <a href="#">Rasch</a> <br>
+                <a href="#">Rossinka</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Realistik</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Regent</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Rehau</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Roca</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">S</a>
+              <nav class="brands_cat-a">
+                <a href="#">Safeline</a> <br>
+                <a href="#">Soudal</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Salag</a><br>
+                <a href="#">Stayer</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Santool</a><br>
+                <a href="#">Swensa</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Schneider Electric</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Sheffilton</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">T</a>
+              <nav class="brands_cat-a">
+                <a href="#">T4P</a> <br>
+                <a href="#">Toplight</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">TRIUMPH NORD</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Tarkett</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Thermo</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Tokito</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">U</a>
+              <nav class="brands_cat-a">
+                <a href="#">UNICUM</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">UNIVERSAL</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Unibob</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Unicorn</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">V</a>
+              <nav class="brands_cat-a">
+                <a href="#">VIDIMA</a> <br>
+                <a href="#">Vortex</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">VODA</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Vents</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Vernissage</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Vincent</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">W</a>
+              <nav class="brands_cat-a">
+                <a href="#">WAGO</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Wester</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Z</a>
+              <nav class="brands_cat-a">
+                <a href="#">Zalger</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Ziber</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">А</a>
+              <nav class="brands_cat-a">
+                <a href="#">АНИ</a> <br>
+                <a href="#">Альпа</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">АСБ-Мебель</a><br>
+                <a href="#">Алюмет</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Авангард</a><br>
+                <a href="#">Арей</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Аист</a><br>
+                <a href="#">Артекс</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Аквафор</a><br>
+                <a href="#">Астрохим</a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Б</a>
+              <nav class="brands_cat-a">
+                <a href="#">Банные штучки</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Барьер</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Белвинил</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Брянские обои</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Бытпласт</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Г</a>
+              <nav class="brands_cat-a">
+                <a href="#">Гипрофи</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Д</a>
+              <nav class="brands_cat-a">
+                <a href="#">Двери.ру</a> <br>
+                <a href="#">ДорВуд</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Дверной Континент</a><br>
+                <a href="#">Дэта</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Делга</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Дельфа</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Джоби</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Е</a>
+              <nav class="brands_cat-a">
+                <a href="#">Еврокерамика</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Едим Дома</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Ж</a>
+              <nav class="brands_cat-a">
+                <a href="#">Жук</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">З</a>
+              <nav class="brands_cat-a">
+                <a href="#">Зеленая Аптека</a> <br>
+                <a href="#">Садовода</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Зенит</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Зубр</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">И</a>
+              <nav class="brands_cat-a">
+                <a href="#">Индустрия</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Итана</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">К</a>
+              <nav class="brands_cat-a">
+                <a href="#">Кедр</a> <br>
+                <a href="#">Контакт</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Керамин</a><br>
+                <a href="#">Континент</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Колор Эксперт</a><br>
+                <a href="#">Кукморский завод</a><br>
+                <a href="#">Металлопосуды</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Колорит</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Комарофф</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Л</a>
+              <nav class="brands_cat-a">
+                <a href="#">Лакра</a> <br>
+                <a href="#">Луга</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Лесенка</a><br>
+                <a href="#">Лукойл</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Лесма</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Лесозавод</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Лесстройпроект</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">М</a>
+              <nav class="brands_cat-a">
+                <a href="#">Макрофлекс</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Н</a>
+              <nav class="brands_cat-a">
+                <a href="#">Нева Тафт</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Нрава</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Нэфис</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">О</a>
+              <nav class="brands_cat-a">
+                <a href="#">ОКСО</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Олимп</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Ондулин</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Орио</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">П</a>
+              <nav class="brands_cat-a">
+                <a href="#">ПРОМЕТ</a> <br>
+                <a href="#">Политэк</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Пинотекс</a><br>
+                <a href="#">Промрукав</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Пластик Репаблик</a><br>
+                <a href="#">Профильдорс</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Пластмаркет</a><br>
+                <a href="#">Профилюкс</a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Полимербыт</a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">Р</a>
+              <nav class="brands_cat-a">
+                <a href="#">Ресанта</a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Рифар</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#">Рыжий кот</a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">B</a>
+              <nav class="brands_cat-a">
+                <a href="#"></a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">B</a>
+              <nav class="brands_cat-a">
+                <a href="#"></a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">B</a>
+              <nav class="brands_cat-a">
+                <a href="#"></a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">B</a>
+              <nav class="brands_cat-a">
+                <a href="#"></a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">B</a>
+              <nav class="brands_cat-a">
+                <a href="#"></a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">B</a>
+              <nav class="brands_cat-a">
+                <a href="#"></a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+            <br>
+            <div class="brands__div-border">
+              <a href="#" class="brands__div-h1">B</a>
+              <nav class="brands_cat-a">
+                <a href="#"></a> <br>
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+              <nav class="brands_cat-a">
+                <a href="#"></a><br>
+                <a href="#"></a><br>
+              </nav>
+            </div>
+            <br>
+            <hr class="brands__hr">
+          </section>
+        </main>
+      <script src="./assets/script/popup.js"></script>
+</body>
+</html>

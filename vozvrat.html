@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/styles/vozvrat.css">
     <link rel="stylesheet" href="./assets/styles/default.css">
     <link rel="stylesheet" href="./assets/styles/main.css" />
+
+    <link rel="shortcut icon" href="./assets/images/favicion/fav.png" type="image/x-icon">
 </head>
 <body>
     <section id="popup" class="popup" style="display: none">
@@ -65,13 +67,12 @@
             <a href="#"><img src="./assets/images/home/Logo.svg" alt="Logo" /></a>
   
             <a
-              href="#"
-              class="catalog__btn-header"
-              onmouseover="showCategories()"
-              onmouseout="hideCategories()"
-            >
-              <i class="bx bx-menu-alt-left header__btn-catalog"></i>Каталог
-            </a>
+            href="#"
+            class="catalog__btn-header"
+            onclick="toggleCategories()"
+        >
+            <i class="bx bx-menu-alt-left header__btn-catalog"></i>Каталог
+        </a>
           </div>
   
           <div class="header__botom-search">

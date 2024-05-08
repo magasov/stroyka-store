@@ -27,48 +27,12 @@ function popupClose() {
     popupDiv.style.display = 'none'
 }
 
-// категория появление при наведение 
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     var parent = document.querySelector('.parent');
-//     var hiddenDiv = parent.querySelector('.categoria__none');
-
-//     parent.addEventListener('mouseover', function() {
-//         hiddenDiv.style.display = 'block';
-//     });
-
-//     parent.addEventListener('mouseout', function() {
-//         hiddenDiv.style.display = 'none';
-//     });
-// });
-
-// function showCategories() {
-//     var categoriesDiv = document.getElementById("categories");
-//     categoriesDiv.style.display = "block";
-// }
-
-// function hideCategories() {
-//     var categoriesDiv = document.getElementById("categories");
-//     categoriesDiv.style.display = "none";
-// }
-
-function showCategories() {
+function toggleCategories() {
     var categoriesDiv = document.getElementById("categories");
-    categoriesDiv.style.display = "block";
-}
-
-function hideCategories() {
-    // Не скрывать категории, если курсор находится над ними
-    var categoriesDiv = document.getElementById("categories");
-    categoriesDiv.addEventListener("mouseover", function() {
+    if (categoriesDiv.style.display === "block") {
+        categoriesDiv.style.display = "none";
+    } else {
         categoriesDiv.style.display = "block";
-    });
-
-    // Скрыть категории только тогда, когда курсор ушел с ссылки "Каталог"
-    var catalogLink = document.querySelector("#categories");
-    catalogLink.addEventListener("mouseout", function(event) {
-        if (!event.relatedTarget || !event.relatedTarget.closest("#categories")) {
-            categoriesDiv.style.display = "none";
-        }
-    });
+    }
 }
+

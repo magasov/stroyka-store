@@ -1,0 +1,147 @@
+.brand {
+    width: 100%;
+    margin: 0 auto;
+    height: 232px;
+    background-size: cover;
+    background-position: center;
+    background: url(../images/brand/banner__brand.jpg);
+    padding: 40px 8%;
+}
+
+.brand__h1 {
+    display: flex;
+    column-gap: 10px;
+}
+
+.brand__h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.popular {
+    width: 100%;
+    padding: 60px 8%;
+}
+
+.popular__brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h1_popular-brand {
+    font-size: 34px;
+    font-weight: 600;
+    color: #2F323A;
+}
+
+.btn_popular-brand {
+    width: 174px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D1D1D3;
+    color: #171B24;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.btn_popular-brand:hover {
+    background: #2F323A;
+    color: #FFFFFF;
+    transition: all .3s ease;
+}
+
+.popular__block-one {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.popular__block1 {
+    margin: 10px 0;
+    width: 180px;
+    height: 124px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E8E9EA;
+}
+
+.popular__block1:hover {
+    border: 1px solid #2F323A;
+}
+
+.brand__abc {
+    width: 100%;
+    padding: 10px 8%;
+}
+
+.brand__abc-catalog {
+    display: flex;
+    width: 100%;
+    column-gap: 8px;
+    padding: 5px 0;
+}
+
+.bukva {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #D1D1D3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #171B24;
+}
+
+.bukva:focus{
+    background: #FBE303;
+}
+
+.bukva:hover{
+    background: #FBE303;
+}
+
+.vse-bucva {
+    width: 60px;
+}
+
+.brands__div {
+    width: 100%;
+    padding: 10px 8%;
+}
+
+.brands__div-border {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.brands_cat-a a{
+    text-decoration: none;
+    color: #2F323A;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.brands_cat-a {
+    width: 180px;
+}
+
+.brands__div-h1 {
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.brands__hr {
+    border: none; 
+    color: #E8E9EA; 
+    background-color: #E8E9EA; 
+    height: 1px;
+}
