@@ -126,7 +126,34 @@
     color: #2F323A;
     font-size: 16px;
     font-weight: 500;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
+
+.brands_cat-a a:hover {
+    transform: translateX(5px);
+}
+
+.brands_cat-a a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+.brands_cat-a a::before {
+  content: '→';
+  background: url(../images/brand/right.png);
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.brands_cat-a a:hover::before {
+  opacity: 1;
+}
+
 
 .brands_cat-a {
     width: 180px;
