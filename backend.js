@@ -19,7 +19,11 @@ app.post('/addToCart', (req, res) => {
 });
 
 app.get('/getCartItems', (req, res) => {
-    res.json(cartItems);
+    res.json(cartItems.map(item => ({
+        name: item.name,
+        price: item.price,
+        image: item.image
+    })))
 });
 
 app.listen(PORT, () => {
