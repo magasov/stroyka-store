@@ -109,3 +109,34 @@
 .vse-bucva {
     width: 60px;
 }
+
+.brands__div {
+    width: 100%;
+    padding: 10px 8%;
+}
+
+.brands__div-border {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.brands_cat-a a{
+    text-decoration: none;
+    color: #2F323A;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.brands__div-h1 {
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.brands__hr {
+    border: none; 
+    color: #E8E9EA; 
+    background-color: #E8E9EA; 
+    height: 1px;
+}
