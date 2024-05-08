@@ -78,13 +78,13 @@ products.forEach(product => {
     productsContainer.innerHTML += productHTML;
 });
 
-function addToCart(name, price) {
+function addToCart(name, price, image) {
     fetch('/addToCart', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, price })
+        body: JSON.stringify({ name, price, image })
     })
         .then(response => {
             if (response.ok) {

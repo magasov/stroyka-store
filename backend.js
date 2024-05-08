@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 let cartItems = [];
 
 app.post('/addToCart', (req, res) => {
-    const { name, price } = req.body;
-    cartItems.push({ name, price });
+    const { name, price, image } = req.body;
+    cartItems.push({ name, price, image });
     res.status(200).send('Товар добавлен в корзину');
 });
 
