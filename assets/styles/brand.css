@@ -116,6 +116,7 @@
 }
 
 .brands__div-border {
+    height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -125,6 +126,10 @@
     color: #2F323A;
     font-size: 16px;
     font-weight: 500;
+}
+
+.brands_cat-a {
+    width: 180px;
 }
 
 .brands__div-h1 {
