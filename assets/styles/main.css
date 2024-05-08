@@ -784,7 +784,11 @@ footer {
     width: 278px;
     height: 208px;
     border-top: 1px solid #E8E9EA;
-    padding: 10px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 7px;
 }
 
 .product__info h3 {
@@ -809,6 +813,8 @@ footer {
     font-weight: 500;
     transition: all .3s ease;
     cursor: pointer;
+    position: relative;
+    left: 6px;
 }
 
 .btn__product:hover {
