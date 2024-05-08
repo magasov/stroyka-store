@@ -793,6 +793,8 @@ footer {
 .product__info p {
     font-size: 20px;
     font-weight: 700;
+    position: relative;
+    top: 40px;
 }
 
 .btn__product {
@@ -806,6 +808,8 @@ footer {
     color: #171B24;
     font-weight: 500;
     transition: all .3s ease;
+    position: relative;
+    top: 55px;
 }
 
 .btn__product:hover {
