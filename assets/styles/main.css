@@ -720,3 +720,13 @@ footer {
     align-items: center;
     color: #D1D1D3;
 }
+
+.categoria__main {
+    padding: 20px 8%;
+}
+
+.btn-categ {
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+}
