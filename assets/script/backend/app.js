@@ -62,6 +62,7 @@ let products = [
 
 ];
 
+
 let productsContainer = document.getElementById("products-container");
 
 products.forEach(product => {
@@ -71,9 +72,29 @@ products.forEach(product => {
             <div class="product__info">
                 <h3>${product.name}</h3>
                 <p>${product.price}</p>
-                <div class="btn__product">В корзину</div>
+                <div class="btn__product" onclick="addToCart('${product.name}', '${product.price}')">В корзину</div>
             </div>
         </div>
     `;
     productsContainer.innerHTML += productHTML;
 });
+
+function addToCart(name, price) {
+    fetch('/addToCart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, price })
+    })
+        .then(response => {
+            if (response.ok) {
+                alert('Товар добавлен в корзину!');
+            } else {
+                throw new Error('Ошибка при добавлении товара в корзину');
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+        });
+}
