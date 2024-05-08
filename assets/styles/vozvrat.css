@@ -50,3 +50,19 @@
 .c{
     padding-left: 85px;
 }
+
+.conteiner-text{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-top: 44px;
+}
+
+.text-vozvrat{
+    padding-left: 150px;
+    font-size: 34px;
+}
+
+.description{
+    
+}
