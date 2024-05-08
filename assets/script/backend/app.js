@@ -62,7 +62,6 @@ let products = [
 
 ];
 
-
 let productsContainer = document.getElementById("products-container");
 
 products.forEach(product => {
@@ -79,17 +78,17 @@ products.forEach(product => {
     productsContainer.innerHTML += productHTML;
 });
 
-function addToCart(productName, productPrice) {
+function addToCart(name, price) {
     fetch('/addToCart', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name: productName, price: productPrice })
+        body: JSON.stringify({ name, price })
     })
         .then(response => {
             if (response.ok) {
-                window.location.href = '/cat.html'; // Перенаправление на страницу cat.html
+                alert('Товар добавлен в корзину!');
             } else {
                 throw new Error('Ошибка при добавлении товара в корзину');
             }
