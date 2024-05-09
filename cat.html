@@ -207,10 +207,46 @@
                     const productPrice = document.createElement('div');
                     productPrice.classList.add('product-price');
                     productPrice.textContent = item.price;
+    
+                    // Добавляем счетчик плюсов и минусов
+                    const counterDiv = document.createElement('div');
+                    counterDiv.classList.add('counter');
+                    const plusButton = document.createElement('button');
+                    plusButton.textContent = '+';
+                    const minusButton = document.createElement('button');
+                    minusButton.textContent = '-';
+                    const quantitySpan = document.createElement('span');
+                    quantitySpan.textContent = '1'; // По умолчанию устанавливаем количество товара в 1
+    
+                    plusButton.addEventListener('click', function() {
+                        let quantity = parseInt(quantitySpan.textContent);
+                        quantity++;
+                        quantitySpan.textContent = quantity;
+                        totalPrice += parseFloat(item.price);
+                        totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
+                    });
+    
+                    minusButton.addEventListener('click', function() {
+                        let quantity = parseInt(quantitySpan.textContent);
+                        if (quantity > 1) {
+                            quantity--;
+                            quantitySpan.textContent = quantity;
+                            totalPrice -= parseFloat(item.price);
+                            totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
+                        }
+                    });
+    
+                    counterDiv.appendChild(minusButton);
+                    counterDiv.appendChild(quantitySpan);
+                    counterDiv.appendChild(plusButton);
+    
                     productInfo.appendChild(productPrice);
+                    productInfo.appendChild(counterDiv);
+    
                     itemDiv.appendChild(image);
                     itemDiv.appendChild(productInfo);
                     cartItemsDiv.appendChild(itemDiv);
+    
                     totalPrice += parseFloat(item.price);
                     totalItems++;
                 });
@@ -222,6 +258,7 @@
                 console.error('Ошибка при получении данных о товарах в корзине:', error);
             });
     </script>
+    
     
     <script src="./assets/script/popup.js"></script>
     <script src="./assets/script/backend/app.js"></script>

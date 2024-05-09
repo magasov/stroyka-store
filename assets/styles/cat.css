@@ -120,7 +120,6 @@
 .cat-info {
     padding: 16px;
     width: 50%;
-    height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
