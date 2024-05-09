@@ -2,5 +2,17 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.19.2"
-  }
+  },
+  "name": "teams-project-3",
+  "description": "<h1 align-items: center>\r   Командная работа",
+  "version": "1.0.0",
+  "main": "backend.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node backend.js",
+    "build": "echo 'Building static files...'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
