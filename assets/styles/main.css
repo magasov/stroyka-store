@@ -853,3 +853,18 @@ footer {
 }
 
   
+.swiper-wrapper {
+    display: flex;
+}
+.reviews{
+    background-color:#f6f6f6;
+    padding-top:50px;
+    padding-bottom:50px
+}
+
+.reviews__title{color:#2f323a;font-size:34px;font-weight:600}.reviews__item{width:320px;height:365px;background-color:#fff;display:flex;flex-direction:column;padding:20px;justify-content:space-between;margin-left:10px}.reviews__item-top{display:flex;justify-content:space-between}.reviews__item-top-personal{display:flex;align-items:center;gap:20px}.reviews__item-top-name{color:#2f323a;font-weight:700;font-size:18px}.reviews__item-text{color:#2f323a;font-size:16px;font-weight:400}.reviews__item-data{color:#8b8d92;font-size:15px;font-weight:500}.reviews__items{position:relative;padding-top:50px}.reviews__btn{position:absolute;cursor:pointer;top:0;z-index:99999}
+.swiper-button-left{left:90%}.swiper-button-right{left:95%}
+.reviews__container {
+    width: 100%;
+    padding: 0 8%;
+}
