@@ -832,11 +832,12 @@ footer {
 }
 
 .notification {
-  background-color: #4CAF50;
+  background-color:#2F323A;
   color: white;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 5px;
+  cursor: pointer;
   animation: slideIn 0.5s ease; 
 }
 
