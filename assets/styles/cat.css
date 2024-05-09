@@ -46,6 +46,7 @@
 }
 
 .cat__one-1 {
+    margin-top: 10px;
     width: 100%;
     height: 244px;
     border: 1px solid #F6F6F6;
@@ -114,6 +115,7 @@
 .cat__product img {
     width: 278px;
     height: 208px;
+    border-right: 1px solid #E8E9EA;
 }
 
 .cat-info {
