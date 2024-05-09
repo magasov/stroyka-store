@@ -67,6 +67,14 @@ header {
     font-family: "Manrope", sans-serif;
 }
 
+.sticky {
+    position: fixed;
+    z-index: 9998;
+    background: #fff;
+    top: 0;
+    border-bottom: 1px solid #D1D1D3;
+}
+
 .catalog__btn-header {
     width: 144px;
     height: 48px;
@@ -830,14 +838,17 @@ footer {
 }
 
 .notification-container {
+  font-family: "Manrope", sans-serif;
   position: fixed;
   top: 20px;
   right: 20px;
   width: 300px;
   z-index: 9999;
+  line-height: 23px;
 }
 
 .notification {
+  font-family: "Manrope", sans-serif;
   background-color:#2F323A;
   color: white;
   padding: 15px;
@@ -845,7 +856,9 @@ footer {
   border-radius: 5px;
   cursor: pointer;
   animation: slideIn 0.5s ease; 
+  line-height: 23px;
 }
+
 
 @keyframes slideIn {
   from {
@@ -886,7 +899,6 @@ footer {
   
   .reviews_cont {
     width: 476px;
-    height: 265px;
     background: #fff;
     margin: 20px 10px;
     padding: 20px;

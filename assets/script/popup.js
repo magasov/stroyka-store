@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const loginTitle = document.querySelector('.popup__title.login');
     const registerTitle = document.querySelector('.popup__title.register');
     const emailInput = document.querySelector('.register-input');
 
-    loginTitle.addEventListener('click', function() {
+    loginTitle.addEventListener('click', function () {
         loginTitle.classList.add('active');
         registerTitle.classList.remove('active');
         emailInput.style.display = 'none';
         document.querySelector('input[type="text"]').setAttribute('placeholder', 'Логин');
     });
 
-    registerTitle.addEventListener('click', function() {
+    registerTitle.addEventListener('click', function () {
         loginTitle.classList.remove('active');
         registerTitle.classList.add('active');
         emailInput.style.display = 'block';
@@ -36,3 +36,10 @@ function toggleCategories() {
     }
 }
 
+
+// header изменение цвета 
+const header = document.querySelector('.header__navbar')
+
+window.addEventListener('scroll', function () {
+    header.classList.toggle('sticky', this.window.scrollY > 700)
+})
