@@ -126,9 +126,9 @@
         <div class="cat__main-one">
             <div class="cat__one-1">
                 <div class="h1__cat-one">Итого</div> 
-                <div class="p__cat-one">Количество товара</div>
+                <div class="p__cat-one" id="total-items"></div>
                 <div class="p__cat-one" id="total-price"></div>
-                <div class="p__cat-one">Поставщик</div>
+                <div class="p__cat-one">Поставщик: Аксон</div>
                 <div class="cat__one-btn">
                     <a href="#" class="btn_cat">Оформить заказ</a>
                 </div>
@@ -146,7 +146,6 @@
             </div>
            
         </div>
-
       </section>
     <footer>
         <div class="footer__one">
@@ -181,19 +180,27 @@
         </div>
       </footer>
 
-    <script>
+      <script>
         fetch('/getCartItems')
             .then(response => response.json())
             .then(cartItems => {
                 const cartItemsDiv = document.getElementById('cart-items');
                 const totalPriceDiv = document.getElementById('total-price');
+                const totalItemsDiv = document.getElementById('total-items');
                 let totalPrice = 0;
-
+                let totalItems = 0;
+    
                 cartItems.forEach(item => {
                     const itemDiv = document.createElement('div');
                     itemDiv.classList.add('cat__product');
                     const image = document.createElement('img');
                     image.src = item.image;
+    
+                    // Добавляем обработчик ошибок загрузки изображения
+                    image.onerror = function() {
+                        console.error('Ошибка загрузки изображения для товара:', item.name);
+                    };
+    
                     const productInfo = document.createElement('div');
                     productInfo.classList.add('cat-info');
                     productInfo.innerHTML = `<h3>${item.name}</h3>`;
@@ -205,14 +212,17 @@
                     itemDiv.appendChild(productInfo);
                     cartItemsDiv.appendChild(itemDiv);
                     totalPrice += parseFloat(item.price);
+                    totalItems++;
                 });
-
+    
                 totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
+                totalItemsDiv.textContent = `Количество товара: ${totalItems}`;
             })
             .catch(error => {
                 console.error('Ошибка при получении данных о товарах в корзине:', error);
             });
     </script>
+    
     <script src="./assets/script/popup.js"></script>
     <script src="./assets/script/backend/app.js"></script>
 </body>
