@@ -853,8 +853,10 @@ footer {
 }
 
 .reviews {
-    padding: 10px 8%;
+    padding: 80px 8%;
     width: 100%;
+    background: #F6F6F6;
+    height: 600px;
   }
   
   .reviews-h1 {
@@ -901,9 +903,24 @@ footer {
     font-size: 16px;
     font-weight: 400;
     color: #2F323A;
+    line-height: 24px;
   }
   
   .reviews_footer {
     display: flex;
     padding: 20px 0;
+    font-size: 15px;
+    color: #8B8D92;
+    font-weight: 500;
   }
+
+.reviews_cont-header1 {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.rew_ic {
+    width: 32px;
+    height: 24px;
+}
