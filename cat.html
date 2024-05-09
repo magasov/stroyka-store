@@ -16,55 +16,6 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .product {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-        }
-        .product img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-        .product-info {
-            flex: 1;
-        }
-        .product-price {
-            font-weight: bold;
-        }
-        .total-price {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        button {
-            padding: 5px 10px;
-            border: none;
-            border-radius: 3px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <section id="popup" class="popup" style="display: none">
@@ -188,16 +139,15 @@
                 <div class="cat__one-2-text"><i class="bx bx-cube"></i> Точная сумма доставки будет определена после после подтверждения заказа</div>
             </div>
         </div>
-        <div class="cat__main-two"></div>
+        <div class="cat__main-two">
+            <div class="cat__two-1">
+                <div id="cart-items"></div>
+                <div class="total-price" id="total-price"></div>
+            </div>
+           
+        </div>
 
       </section>
-
-    <div class="container">
-        <h1>Корзина</h1>
-        <div id="cart-items"></div>
-        <div class="total-price" id="total-price"></div>
-    </div>
-
     <footer>
         <div class="footer__one">
           <nav class="footer__nav">
@@ -241,11 +191,11 @@
 
                 cartItems.forEach(item => {
                     const itemDiv = document.createElement('div');
-                    itemDiv.classList.add('product');
+                    itemDiv.classList.add('cat__product');
                     const image = document.createElement('img');
                     image.src = item.image;
                     const productInfo = document.createElement('div');
-                    productInfo.classList.add('product-info');
+                    productInfo.classList.add('cat-info');
                     productInfo.innerHTML = `<h3>${item.name}</h3>`;
                     const productPrice = document.createElement('div');
                     productPrice.classList.add('product-price');
