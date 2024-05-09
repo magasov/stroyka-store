@@ -199,12 +199,15 @@
                     };
     
                     const productInfo = document.createElement('div');
+                    const productInfo2 = document.createElement('div');
                     productInfo.classList.add('cat-info');
+                    productInfo2.classList.add('cat-info2');
                     productInfo.innerHTML = `<h3>${item.name}</h3>`;
                     const productPrice = document.createElement('div');
                     productPrice.classList.add('product-price');
                     productPrice.textContent = item.price;
     
+
                     const deleteButton = document.createElement('button');
                     deleteButton.classList.add('delete__btn')
                     deleteButton.textContent = 'Удалить';

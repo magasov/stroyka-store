@@ -120,7 +120,6 @@
 .cat-info {
     padding: 16px;
     display: flex;
-    background: red;
     flex-direction: column;
     justify-content: space-between;
     font-size: 16px;
@@ -157,7 +156,6 @@
 
 .cat-info-two {
     width: 100%;
-    background-color: red;
 }
 
 .delete__btn {
@@ -172,4 +170,3 @@
     font-size: 18px;
     font-weight: 500;
 }
-
