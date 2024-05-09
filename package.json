@@ -7,6 +7,9 @@
   "description": "<h1 align-items: center>\r   Командная работа",
   "version": "1.0.0",
   "main": "backend.js",
+  "engines": {
+    "node": "14.x"
+  },
   "devDependencies": {},
   "scripts": {
     "start": "node backend.js",
