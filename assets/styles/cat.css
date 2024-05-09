@@ -1,0 +1,108 @@
+.corzina {
+    width: 100%;
+    margin: 0 auto;
+    height: 232px;
+    background-size: cover;
+    background-position: center;
+    background: url(../images/brand/banner__brand.jpg);
+    padding: 40px 8%;
+}
+
+.corzina__h1 {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    column-gap: 10px;
+}
+
+.corzina__h1 i {
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+.corzina__h1 a {
+    text-decoration: none;
+    color: #454950;
+}
+
+.corzina__h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.cat__main {
+    display: flex;
+    padding: 40px 8%;
+    justify-content: space-between;
+}
+
+.cat__main-one {
+    width: 20%;
+    height: 656px;
+}
+
+.cat__main-two {
+    width: 78%;
+    height: 656px;
+    background: blue;
+}
+
+.cat__one-1 {
+    width: 100%;
+    height: 244px;
+    border: 1px solid #F6F6F6;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.h1__cat-one {
+    font-size: 20px;
+    font-weight: 700;
+    color: #171B24;
+}
+
+.p__cat-one {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cat__one-btn {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+}
+
+.btn_cat {
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    height: 48px;
+    background: #FCEC41;
+    color: #171B24;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat__one-2 {
+    padding: 10px 0;
+}
+
+.cat__one-2-text {
+    font-size: 15px;
+    color: #454950;
+    font-weight: 500;
+    margin: 10px 0;
+    column-gap: 5px;
+
+    line-height: 21.75px;
+    display: flex;
+}
+
+.cat__one-2-text i {
+    font-size: 24px;
+}
