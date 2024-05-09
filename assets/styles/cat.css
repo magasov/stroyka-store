@@ -125,6 +125,19 @@
     font-size: 16px;
     color: #171B24;
     font-weight: 500;
+    width: 50%;
+}
+
+.cat-info2 {
+    width: 50%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #171B24;
+    font-weight: 500;
+    background: red;
 }
 
 .product-price {
