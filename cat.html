@@ -143,8 +143,6 @@
             <div class="cat__two-1">
                 <div id="cart-items"></div>
                 <div class="total-price" id="total-price"></div>
-            </div>
-           
         </div>
       </section>
     <footer>
@@ -196,7 +194,6 @@
                     const image = document.createElement('img');
                     image.src = item.image;
     
-                    // Добавляем обработчик ошибок загрузки изображения
                     image.onerror = function() {
                         console.error('Ошибка загрузки изображения для товара:', item.name);
                     };
@@ -208,7 +205,17 @@
                     productPrice.classList.add('product-price');
                     productPrice.textContent = item.price;
     
-                    // Добавляем счетчик плюсов и минусов
+                    const deleteButton = document.createElement('button');
+                    deleteButton.classList.add('delete__btn')
+                    deleteButton.textContent = 'Удалить';
+                    deleteButton.addEventListener('click', function() {
+                        itemDiv.remove();
+                        totalPrice -= parseFloat(item.price);
+                        totalItems--;
+                        totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
+                        totalItemsDiv.textContent = `Количество товара: ${totalItems}`;
+                    });
+    
                     const counterDiv = document.createElement('div');
                     counterDiv.classList.add('counter');
                     const plusButton = document.createElement('button');
@@ -216,7 +223,7 @@
                     const minusButton = document.createElement('button');
                     minusButton.textContent = '-';
                     const quantitySpan = document.createElement('span');
-                    quantitySpan.textContent = '1'; // По умолчанию устанавливаем количество товара в 1
+                    quantitySpan.textContent = '1'; 
     
                     plusButton.addEventListener('click', function() {
                         let quantity = parseInt(quantitySpan.textContent);
@@ -241,6 +248,7 @@
                     counterDiv.appendChild(plusButton);
     
                     productInfo.appendChild(productPrice);
+                    productInfo.appendChild(deleteButton); 
                     productInfo.appendChild(counterDiv);
     
                     itemDiv.appendChild(image);
@@ -258,6 +266,7 @@
                 console.error('Ошибка при получении данных о товарах в корзине:', error);
             });
     </script>
+    
     
     
     <script src="./assets/script/popup.js"></script>

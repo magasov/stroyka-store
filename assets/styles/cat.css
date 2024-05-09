@@ -119,8 +119,8 @@
 
 .cat-info {
     padding: 16px;
-    width: 50%;
     display: flex;
+    background: red;
     flex-direction: column;
     justify-content: space-between;
     font-size: 16px;
@@ -154,3 +154,22 @@
     border-right: 1px solid #E8E9EA;
     border-left: 1px solid #E8E9EA;
 }
+
+.cat-info-two {
+    width: 100%;
+    background-color: red;
+}
+
+.delete__btn {
+    width: 262px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D1D1D3;
+    background: transparent;
+    color: #171B24;
+    font-size: 18px;
+    font-weight: 500;
+}
+
