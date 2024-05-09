@@ -522,12 +522,12 @@ article img {
 
 .aktsia__main-one {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .aktsia__main-one1 {
-    width: 780px;
-    height: 328px;
+    width: 572px;
+    height: 208px;
     border: 1px solid #E8E9EA;
     margin: 10px;
     display: flex;
@@ -535,13 +535,11 @@ article img {
 }
 
 .aktsia__main-product {
-    width: 390px;
+    padding: 10px;
+    width: 386px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 80px 0;
-    position: relative;
-    left: 20px;
 }
 
 .aktsia__main-product-img {
@@ -551,10 +549,14 @@ article img {
     justify-content: center;
 }
 
+.aktsia__main-product-img img {
+    width: 208px;
+}
+
 .aktsia__main-product-h1 {
     color: #2F323A;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
 }
 
@@ -581,7 +583,7 @@ article img {
 }
 
 .aktsia__main-product-btn {
-    width: 262px;
+    width: 232px;
     height: 48px;
     background: #FCEC41;
     display: flex;
@@ -592,6 +594,7 @@ article img {
     font-weight: 500;
     transition: all .3s ease;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .aktsia__main-product-btn:hover {
