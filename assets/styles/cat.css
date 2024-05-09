@@ -128,6 +128,10 @@
     width: 50%;
 }
 
+.cat-info h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
 .cat-info2 {
     width: 50%;
     padding: 16px;
@@ -137,12 +141,13 @@
     font-size: 16px;
     color: #171B24;
     font-weight: 500;
-    background: red;
 }
 
 .product-price {
     font-size: 20px;
     font-weight: 700;
+    position: relative;
+    top: 20px;
 }
 
 .counter {
@@ -181,5 +186,15 @@
     background: transparent;
     color: #171B24;
     font-size: 18px;
+    font-weight: 500;
+}
+
+.delete__btn:hover {
+    background: #2F323A;
+    color: #fff;
+}
+.contentKod {
+    font-size: 18px;
+    color: #2F323A;
     font-weight: 500;
 }

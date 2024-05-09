@@ -206,11 +206,14 @@
                     const productPrice = document.createElement('div');
                     productPrice.classList.add('product-price');
                     productPrice.textContent = item.price;
-    
+                    
+                    const contentKod = document.createElement('div')
+                    contentKod.classList.add('contentKod')
+                    contentKod.textContent = 'Код товара: 34078988-0047'
 
                     const deleteButton = document.createElement('button');
                     deleteButton.classList.add('delete__btn')
-                    deleteButton.textContent = 'Удалить';
+                    deleteButton.textContent = 'Удалить товар';
                     deleteButton.addEventListener('click', function() {
                         itemDiv.remove();
                         totalPrice -= parseFloat(item.price);
@@ -251,6 +254,7 @@
                     counterDiv.appendChild(plusButton);
     
                     productInfo.appendChild(productPrice);
+                    productInfo2.appendChild(contentKod); 
                     productInfo2.appendChild(deleteButton); 
                     productInfo.appendChild(counterDiv);
     
