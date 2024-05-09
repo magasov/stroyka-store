@@ -126,10 +126,31 @@
     font-size: 16px;
     color: #171B24;
     font-weight: 500;
-    background: red;
 }
 
 .product-price {
     font-size: 20px;
     font-weight: 700;
+}
+
+.counter {
+    width: 170px;
+    display: flex;
+    border-top: 1px solid #E8E9EA;
+    border-bottom: 1px solid #E8E9EA;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-right: 1px solid #E8E9EA;
+    border-left: 1px solid #E8E9EA;
 }
