@@ -71,14 +71,14 @@ products.forEach(product => {
             <div class="product__info">
                 <h3>${product.name}</h3>
                 <p>${product.price}</p>
-                <div class="btn__product" onclick="addToCart('${product.name}', '${product.price}')">В корзину</div>
+                <div class="btn__product" onclick="addToCart('${product.name}', '${product.price}', '${product.image}')">В корзину</div>
             </div>
         </div>
     `;
     productsContainer.innerHTML += productHTML;
 });
 
-function addToCart(name, price, image) {
+const addToCart = (name, price, image) => {
     fetch('/addToCart', {
         method: 'POST',
         headers: {
