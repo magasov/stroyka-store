@@ -79,6 +79,16 @@ products.forEach(product => {
 });
 
 const addToCart = (name, price, image) => {
+
+    var container = document.getElementById("notification-container");
+    var notification = document.createElement("div");
+    notification.className = "notification";
+    notification.innerText = "Товар добавлен в корзину!";
+    container.insertBefore(notification, container.firstChild);
+
+    setTimeout(function () {
+        container.removeChild(notification);
+    }, 3000);
     fetch('/addToCart', {
         method: 'POST',
         headers: {
@@ -86,14 +96,13 @@ const addToCart = (name, price, image) => {
         },
         body: JSON.stringify({ name, price, image })
     })
-        .then(response => {
-            if (response.ok) {
-                alert('Товар добавлен в корзину!');
-            } else {
-                throw new Error('Ошибка при добавлении товара в корзину');
-            }
-        })
+
         .catch(error => {
             console.error('Ошибка:', error);
         });
+}
+
+
+function showNotification() {
+
 }
