@@ -1158,4 +1158,8 @@ footer {
     .aktsia__main-product-h1 {
         justify-content: center;
     }
+    #products-container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
 }
