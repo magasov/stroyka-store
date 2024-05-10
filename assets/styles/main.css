@@ -1116,6 +1116,9 @@ footer {
     .header__span {
         font-size: 12px;
     }
+    .header {
+        height: 60px;
+    }
     .header__nav {
         flex-wrap: wrap;
         font-size: 12px;
@@ -1137,9 +1140,18 @@ footer {
     }
     .navbar_header {
         flex-wrap: wrap;
+        display: none;
+    }
+    .slider-prev-next-control {
+        bottom: 60px;
+        left: 30px;
+    }
+    .header__baner-btn {
+        margin-top: 20px;
     }
     .header__nav-bar {
         margin-top: 40px;
+        display: none;
     }
     .aktsiya {
         padding: 0 5px;
@@ -1163,5 +1175,26 @@ footer {
     #products-container {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
+    }
+    .slider-wrapper {
+        height: 300px;
+    }
+    .info {
+        padding: 10px 5px;
+    }
+    .info h1 {
+        font-size: 30px;
+        line-height: normal;
+    }
+    .info p {
+        font-size: 16px;
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+    .home {
+        height: 300px;
+    }
+    .header__navbar-two {
+        display: none;
     }
 }
