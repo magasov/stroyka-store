@@ -1102,3 +1102,25 @@ footer {
     width: 32px;
     height: 24px;
 }
+
+/* iPhone 12, 12 Pro, 13, 13 Pro (портретный режим) */
+@media (max-width: 390px) {
+	header {
+        padding: 0 5px;
+        flex-wrap: wrap;
+        height: 60px;
+    }
+    .header__nav {
+        flex-wrap: wrap;
+    }
+    .header__navbar {
+        flex-wrap: wrap;
+        padding: 0 5px;
+    }
+    .header__inp {
+        width: 378px;
+    }
+    .header__main-one {
+        column-gap: 53px;
+    }
+}
