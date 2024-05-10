@@ -1108,10 +1108,17 @@ footer {
 	header {
         padding: 0 5px;
         flex-wrap: wrap;
-        height: 60px;
+        height: 50px;
+    }
+    .header__map {
+        font-size: 12px;
+    }
+    .header__span {
+        font-size: 12px;
     }
     .header__nav {
         flex-wrap: wrap;
+        font-size: 12px;
     }
     .header__navbar {
         flex-wrap: wrap;
