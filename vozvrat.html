@@ -17,35 +17,58 @@
     <link rel="shortcut icon" href="./assets/images/favicion/fav.png" type="image/x-icon">
 </head>
 <body>
-    <section id="popup" class="popup" style="display: none">
-        <div class="close__header-ic" onclick="popupClose()">
-          <img src="assets/images/home/close.png" />
+  <section id="popup" class="popup" style="display: none">
+    <div class="close__header-ic" onclick="popupClose()">
+      <img src="assets/images/home/close.png" />
+    </div>
+    <form id="signInPopup" class="form__popup">
+      <div class="form__popup-header">Вход</div>
+      <div class="form__popup-main">
+        <div class="inp__main-div">
+          <p class="inp_maon-p">E-mail</p>
+          <input type="text" placeholder="youmail@mail.com" name="name" id="popupName"> <br>
         </div>
-        <form class="form__popup">
-          <div class="popup__form-top">
-            <h2 class="popup__title login">Войти</h2>
-            <h2 class="popup__title register">Регистрация</h2>
+        <div class="inp__main-div2">
+          <p class="inp_maon-p">Пароль</p>
+          <input type="password" placeholder="****************" name="password" id="popupPassword">
+          <a href="#" class="inp_maon-a">Забыли пароль?</a>
+      </div>
+      </div>
+      <div class="form__popup-footer">
+        <div>
+          <button class="form__popup-btn" type="submit">Войти</button>
+          <button onclick="signUp()" class="form__popup-btn form_regist" type="submit">Создать учетную запись</button>
+        </div>
+      </div>
+    </form>
+
+    <form class="form__popup-signUp" id="signUpPopup">
+      <div class="form__popup-header">Регистрация</div> <br> <br>
+      <div class="form__popup-main-sign">
+        <div class="form__sign1">
+          <div class="inp__main-div">
+            <p class="inp_maon-p">Имя</p>
+            <input type="text" placeholder="Богдан" class="inp__main-sign" name="name" id="popupName"> <br>
           </div>
-          <div class="form__main">
-            <input
-              type="text"
-              placeholder="Логин"
-              class="login_header login-input"
-            />
-            <br />
-            <input
-              type="email"
-              placeholder="Email"
-              class="login_header register-input"
-              style="display: none"
-            />
-            <br />
-            <input type="password" class="login_header" placeholder="Пароль" />
-            <br />
-            <button class="poppup_btn">Войти</button>
+          <div class="inp__main-div">
+            <p class="inp_maon-p">E-mail</p>
+            <input type="email" placeholder="youmail@mail.com" class="inp__main-sign" name="name" id="popupName"> <br>
           </div>
-        </form>
-      </section>
+        </div><br>
+        <div class="form__sign1">
+          <div class="inp__main-div">
+            <p class="inp_maon-p">Новый пароль</p>
+            <input type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
+          </div>
+          <div class="inp__main-div">
+            <p class="inp_maon-p">Подтверждение пароля</p>
+            <input type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
+          </div>
+        </div>
+      </div> <br> <br> 
+        <button class="signUp-popup">Зарегистрироваться</button>
+    </form>
+  </section>
       <header>
         <div class="header__one">
           <a href="#" class="header__map"
