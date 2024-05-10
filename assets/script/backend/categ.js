@@ -1,81 +1,81 @@
 let products1 = [
     {
-        image: "./assets/images/home/popular/popular1.png",
+        image: "./assets/images/categoria/categ1.png",
         name: "Шпатлевка масляно-клеевая 3кг Л-С",
         price: "212 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular2.png",
+        image: "./assets/images/categoria/categ2.png",
         name: "Штукатурка цементная толстослойная PLITONIT Т1+ 25 кг",
         price: "349 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular3.png",
+        image: "./assets/images/categoria/categ3.png",
         name: "Штукатурка гипсовая Волма Слой, 5 кг",
         price: "229 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular4.png",
+        image: "./assets/images/categoria/categ4.png",
         name: "Клей плиточный Дауэр Кварц Dauer Quartz 25кг",
         price: "490 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular5.png",
+        image: "./assets/images/categoria/categ5.png",
         name: "Клей плиточный Dauer Maxi Дауэр Макси 25кг толстослойный",
         price: "470 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular6.png",
+        image: "./assets/images/categoria/categ6.png",
         name: "Кнауф МП 75 штукатурка гипсовая МН 30кг",
         price: "380 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular7.png",
+        image: "./assets/images/categoria/categ7.png",
         name: "Штукатурка гипсовая Основит Т-25 Гипсвэлл",
         price: "295 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular8.png",
+        image: "./assets/images/categoria/categ8.png",
         name: "Затирка CERESIT CE33 (ЦЕРЕЗИТ СЕ33) розовая (2 кг)",
         price: "250 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular9.png",
+        image: "./assets/images/categoria/categ9.png",
         name: "Основит PG 35 W (Т-35) Экосилк Шпатлевка гипсовая белая (20 кг)",
         price: "320 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular10.png",
+        image: "./assets/images/categoria/categ10.png",
         name: "Клей гипсовый монтажный Knauf Перлфикс 30 кг",
         price: "425 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular11.png",
+        image: "./assets/images/categoria/categ11.png",
         name: "Шпатлевка готовая финишная Sheetrock Danogips SuperFinish 17 л",
         price: "2200 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular12.png",
+        image: "./assets/images/categoria/categ12.png",
         name: "Грунтовка Knauf Тифенгрунд морозостойкая 10 кг",
         price: "969 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular1.png",
+        image: "./assets/images/categoria/categ13.png",
         name: "Штукатурка гипсовая Perfekta Гипстар серая 30 кг",
         price: "315 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular2.png",
+        image: "./assets/images/categoria/categ14.png",
         name: "Штукатурка цементная высокопрочная Hands Socle PRO, 24 кг",
         price: "976 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular3.png",
+        image: "./assets/images/categoria/categ15.png",
         name: "Смесь М-200 монтажно-кладочная, Baumax (50 кг)",
         price: "502 ₽"
     },
     {
-        image: "./assets/images/home/popular/popular4.png",
+        image: "./assets/images/categoria/categ16.png",
         name: "Клей плиточный (C0) BUILDER КП-500 25 кг.",
         price: "302 ₽"
     }
