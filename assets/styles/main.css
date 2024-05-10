@@ -1213,6 +1213,10 @@ footer {
         justify-items: center;
     }
     .reviews {
-        padding: 0 5px;
+        padding: 0;
+        height: 300px;
+    }
+    footer {
+        display: none;
     }
 }
