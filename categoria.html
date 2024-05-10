@@ -201,7 +201,7 @@
           </div>
         </div>
        
-        <div class="categoria_main-two">
+        <div class="m">
           <div id="products-container"></div>
         </div>
       </div>
@@ -240,71 +240,11 @@
       </div>
     </footer>
     <script src="./assets/script/popup.js"></script>
-    <script src="./assets/script/backend/app.js"></script>
+    <script src="./assets/script/backend/categ.js"></script>
       <div id="notification" class="notification">
         Товар добавлен в корзину!
       </div>
       <div id="notification-container" class="notification-container"></div>
-   
-      <script>
-
-$( function() {
-            var minPriceInput = $("#minPrice");
-            var maxPriceInput = $("#maxPrice");
-
-            $("#priceRange").slider({
-                range: true,
-                min: 0,
-                max: 3000,
-                values: [ 0, 3000 ],
-                slide: function( event, ui ) {
-                    $("#priceRangeValue").html("Цена: " + ui.values[ 0 ] + " - " + ui.values[ 1 ]);
-                    minPriceInput.val(ui.values[ 0 ]);
-                    maxPriceInput.val(ui.values[ 1 ]);
-                },
-                stop: function( event, ui ) {
-                    filterByPrice(ui.values[0], ui.values[1]);
-                }
-            });
-
-            minPriceInput.change(function() {
-                var minValue = parseInt($(this).val());
-                var maxValue = parseInt(maxPriceInput.val());
-                $("#priceRange").slider("values", 0, minValue);
-                filterByPrice(minValue, maxValue);
-            });
-
-            maxPriceInput.change(function() {
-                var minValue = parseInt(minPriceInput.val());
-                var maxValue = parseInt($(this).val());
-                $("#priceRange").slider("values", 1, maxValue);
-                filterByPrice(minValue, maxValue);
-            });
-
-            $("#priceRangeValue").html("Цена: " + $("#priceRange").slider("values", 0 ) +
-                " - " + $("#priceRange").slider("values", 1 ));
-        });
-
-        function filterByPrice(minPrice, maxPrice) {
-            var filteredProducts = products.filter(function(product) {
-                return product.price >= minPrice && product.price <= maxPrice;
-            });
-            displayProducts(filteredProducts);
-        }
-
-        function displayProducts(productsToShow) {
-            var container = document.getElementById("productsContainer");
-            container.innerHTML = ""; 
-            productsToShow.forEach(function(product) {
-                var productDiv = document.createElement("div");
-                productDiv.className = "product";
-                productDiv.textContent = `${product.name} - Цена: ${product.price}, Популярность: ${product.popularity}`;
-                container.appendChild(productDiv);
-            });
-        }
-
-        displayProducts(products);
-      </script>
-      <script src="./assets/script/backend/app.js"></script>
+      <script src="./assets/script/backend/categ.js"></script>
   </body>
 </html>
