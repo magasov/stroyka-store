@@ -450,37 +450,102 @@ article img {
 }
 
 .form__popup {
-    width: 400px;
-    height: 420px;
+    width: 376px;
+    height: 490px;
     background: white;
+    padding: 20px;
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.login_header {
+.form__popup-header {
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 44.2px;
+}
+
+.form__popup-main {
+    width: 100%;
+    height: 176px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form__popup-main input {
     width: 304px;
     height: 48px;
-    outline: none;
     border: none;
+    outline: none;
     background: #F6F6F6;
     border-bottom: 1px solid #D1D1D3;
+    font-size: 18px;
+    padding: 0 10px;
 }
 
-.form__main {
-    position: relative;
+.form__popup-footer {
     width: 100%;
-    top: 70px;
+    height: 108px;
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.form__popup-footer div{
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form__popup-btn {
+    width: 304px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #171B24;
+    font-size: 18px;
+    font-weight: 500;
+    background: #FCEC41;
+    border: none;
+}
+
+.form_regist {
+    background: #fff;
+    border: 1px solid #D1D1D3;
+}
+
+.inp__main-div {
+    width: 304px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.poppup_btn {
+.inp__main-div2 {
     width: 304px;
-    height: 48px;
-    background: #FCEC41;
-    border: none;
-    color: #171B24;
-    font-size: 18px;
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inp_maon-p {
+    font-size: 16px;
+    color: #2F323A;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.form__popup-main input::placeholder {
+    color: #8B8D92;
 }
 
 .aktsiya {
