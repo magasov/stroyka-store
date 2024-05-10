@@ -44,8 +44,8 @@
         </div>
         <div class="form__popup-footer">
           <div>
-            <button  onclick="login()" class="form__popup-btn" type="submit">Войти</button>
-            <button onclick="signUp()" class="form__popup-btn form_regist" type="submit">Создать учетную запись</button>
+            <button onclick="login()" class="form__popup-btn">Войти</button> <br>
+            <div onclick="signUp()" class="form__popup-btn form_regist">Создать учетную запись</div>
           </div>
         </div>
       </form>
@@ -113,9 +113,9 @@
           <button class="header__search"><i class="bx bx-search"></i></button>
         </div>
         <div class="header__nav-bar">
-          <div class="header__nav-bar1" onclick="popupBlock()">
-            <a href="#"><i class="bx bx-user header_nav-ic"></i></a>
-            <div><button id="loginRegisterButton" onclick="openModal()">Профиль</button> <button id="logoutButton" onclick="logout()" style="display: none;">Выйти</button></div>
+          <div class="header__nav-bar1">
+            <a href="#" onclick="popupBlock()"><i class="bx bx-user header_nav-ic"></i></a>
+            <div><button id="loginRegisterButton" >Профиль</button> <button id="logoutButton" onclick="logout()" style="display: none;">Выйти</button></div>
             
           </div>
           <div class="header__nav-bar1">

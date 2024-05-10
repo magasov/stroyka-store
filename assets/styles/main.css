@@ -161,6 +161,28 @@ header {
     height: 48px;
     cursor: pointer;
     text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.header__nav-bar1 div {
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #454950;
+}
+
+.header__nav-bar1 a {
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #454950;
 }
 
 .header_nav-ic {
@@ -496,13 +518,6 @@ article img {
     align-items: center;
 }
 
-.form__popup-footer div{
-    height: 108px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .inp_maon-a {
     font-size: 15px;
     font-weight: 500;
@@ -560,6 +575,7 @@ article img {
     font-size: 18px;
     font-weight: 500;
     line-height: 24.48px;
+    cursor: pointer;
 }
 
 .form__popup-btn {
@@ -579,6 +595,7 @@ article img {
 .form_regist {
     background: #fff;
     border: 1px solid #D1D1D3;
+    display: flex;
 }
 
 .inp__main-div {
@@ -812,6 +829,17 @@ article img {
     color: #2F323A;
     font-size: 18px;
     font-weight: 500;
+}
+
+#loginRegisterButton,
+#logoutButton {
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #454950;
+    background: transparent;
+    cursor: pointer;
+    height: 20px;
 }
 
 footer {
