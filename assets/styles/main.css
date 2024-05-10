@@ -1153,7 +1153,9 @@ footer {
         flex-direction: column;
     }
     .aktsia__main-product {
+        display: grid;
         justify-content: center;
+        padding: 0;
     }
     .aktsia__main-product-h1 {
         justify-content: center;
