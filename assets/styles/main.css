@@ -1126,8 +1126,36 @@ footer {
     }
     .header__inp {
         width: 378px;
+        height: 40px;
+    }
+    .header__botom-search {
+        position: relative;
+        top: 5px;
     }
     .header__main-one {
         column-gap: 53px;
+    }
+    .navbar_header {
+        flex-wrap: wrap;
+    }
+    .header__nav-bar {
+        margin-top: 40px;
+    }
+    .aktsiya {
+        padding: 0 5px;
+    }
+    .aktsia__main-one {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .aktsia__main-one1 {
+        width: 378px;
+        height: 300px;
+        flex-direction: column;
+    }
+    .aktsia__main-product {
+        justify-content: center;
+    }
+    .aktsia__main-product-h1 {
+        justify-content: center;
     }
 }
