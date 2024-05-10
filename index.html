@@ -34,17 +34,17 @@
         <div class="form__popup-main">
           <div class="inp__main-div">
             <p class="inp_maon-p">E-mail</p>
-            <input type="text" placeholder="youmail@mail.com" name="name" id="popupName"> <br>
+            <input id="loginUsername" type="text" placeholder="youmail@mail.com" name="name" id="popupName"> <br>
           </div>
           <div class="inp__main-div2">
             <p class="inp_maon-p">Пароль</p>
-            <input type="password" placeholder="****************" name="password" id="popupPassword">
+            <input id="loginPassword" type="password" placeholder="****************" name="password" id="popupPassword">
             <a href="#" class="inp_maon-a">Забыли пароль?</a>
         </div>
         </div>
         <div class="form__popup-footer">
           <div>
-            <button class="form__popup-btn" type="submit">Войти</button>
+            <button  onclick="login()" class="form__popup-btn" type="submit">Войти</button>
             <button onclick="signUp()" class="form__popup-btn form_regist" type="submit">Создать учетную запись</button>
           </div>
         </div>
@@ -56,25 +56,25 @@
           <div class="form__sign1">
             <div class="inp__main-div">
               <p class="inp_maon-p">Имя</p>
-              <input type="text" placeholder="Богдан" class="inp__main-sign" name="name" id="popupName"> <br>
+              <input id="registerUsername" type="text" placeholder="Богдан" class="inp__main-sign" name="name" id="popupName"> <br>
             </div>
             <div class="inp__main-div">
               <p class="inp_maon-p">E-mail</p>
-              <input type="email" placeholder="youmail@mail.com" class="inp__main-sign" name="name" id="popupName"> <br>
+              <input type="email" id="registerEmail" placeholder="youmail@mail.com" class="inp__main-sign" name="name" id="popupName"> <br>
             </div>
           </div><br>
           <div class="form__sign1">
             <div class="inp__main-div">
               <p class="inp_maon-p">Новый пароль</p>
-              <input type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
+              <input id="registerPassword" type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
             </div>
             <div class="inp__main-div">
               <p class="inp_maon-p">Подтверждение пароля</p>
-              <input type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
+              <input id="confirmPassword" type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
             </div>
           </div>
         </div> <br> <br> 
-          <button class="signUp-popup">Зарегистрироваться</button>
+          <button onclick="register()" class="signUp-popup">Зарегистрироваться</button>
       </form>
     </section>
     <header>
@@ -115,7 +115,8 @@
         <div class="header__nav-bar">
           <div class="header__nav-bar1" onclick="popupBlock()">
             <a href="#"><i class="bx bx-user header_nav-ic"></i></a>
-            <div>Профиль</div>
+            <div><button id="loginRegisterButton" onclick="openModal()">Профиль</button> <button id="logoutButton" onclick="logout()" style="display: none;">Выйти</button></div>
+            
           </div>
           <div class="header__nav-bar1">
             <a href="#"><i class="bx bx-cube header_nav-ic"></i></a>
@@ -636,6 +637,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script><script  src="./script.js"></script>
   
+    <script src="./assets/script/script.js"></script>
     <script>
       $(".multiple-items").slick({
       dots: true,
