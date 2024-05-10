@@ -154,6 +154,7 @@ header {
     display: flex;
     column-gap: 10px;
     color: #454950;
+    height: 54px;
 }
 
 .header__nav-bar1 {
