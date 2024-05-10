@@ -453,7 +453,7 @@ article img {
     width: 376px;
     height: 490px;
     background: white;
-    padding: 20px;
+    padding: 40px 20px;
     font-family: "Manrope", sans-serif;
     display: flex;
     flex-direction: column;
@@ -503,6 +503,14 @@ article img {
     justify-content: space-between;
 }
 
+.inp_maon-a {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21.75px;
+    color: #5D6066;
+    text-decoration: none;
+}
+
 .form__popup-btn {
     width: 304px;
     height: 48px;
@@ -514,6 +522,7 @@ article img {
     font-weight: 500;
     background: #FCEC41;
     border: none;
+    cursor: pointer;
 }
 
 .form_regist {
@@ -534,7 +543,7 @@ article img {
     height: 114px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .inp_maon-p {
