@@ -1,0 +1,28 @@
+main {
+    width: 100%;
+    padding: 10px 8%;
+}
+
+.categoria_header {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.categoria_header-a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.categoria_header-a a {
+    text-decoration: none;
+    color: #454950;
+}
+
+.categoria-h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    color: #171B24;
+}
