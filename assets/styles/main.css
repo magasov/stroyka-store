@@ -515,7 +515,7 @@ article img {
     width: 572px;
     height: 396px;
     background: #FFFFFF;
-    padding: 20px 20px;
+    padding: 40px 20px;
     font-family: "Manrope", sans-serif;
 }
 
@@ -601,6 +601,7 @@ article img {
     color: #2F323A;
     line-height: 24px;
     font-weight: 500;
+    margin-bottom: 3px;
 }
 
 .form__popup-main input::placeholder {
