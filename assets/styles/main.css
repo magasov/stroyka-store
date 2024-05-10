@@ -1197,4 +1197,22 @@ footer {
     .header__navbar-two {
         display: none;
     }
+    .popular {
+        padding: 0;
+    }
+    .h1_popular-brand {
+        font-size: 20px;
+    }
+    .btn_popular-brand {
+        width: 154px;
+        font-size: 13px;
+        height: 28px;
+    }
+    .popular__block-one {
+        grid-template-columns: repeat(2, 10fr);
+        justify-items: center;
+    }
+    .reviews {
+        padding: 0 5px;
+    }
 }
