@@ -26,3 +26,94 @@ main {
     line-height: 57.6px;
     color: #171B24;
 }
+
+.categoria_main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categoria_main-one {
+    width: 20%;
+    padding: 15px 10px;
+}
+
+.categoria_main-two{
+    width: 78%;
+    height: 200px;
+    background: blue;
+}
+
+.categoria_one-header h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.48px;
+    color: #171B24;
+}
+
+.categoria_one-inp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sliderInput {
+    width: 117px;
+    height: 48px;
+    background: #F6F6F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-bottom: 1px solid #D1D1D3;
+    outline: none;
+    font-size: 18px;
+    color: #8B8D92;
+    font-weight: 500;
+    padding: 0 12px;
+    line-height: 24.48px;
+}
+
+.ui-slider {
+    background-color: #E8E9EA; 
+}
+
+.ui-slider .ui-slider-handle {
+    width: 20px; 
+    height: 20px; 
+    background-color: #8B8D92; 
+    border-radius: 0px;
+    border: none;
+    outline: none;
+}
+
+ .ui-slider .ui-slider-handle.ui-state-hover,
+ .ui-slider .ui-slider-handle.ui-state-active {
+    border-radius: 0px;
+    background: #8B8D92;
+     border: none;
+     outline: none;
+ }
+
+ .categ-header__inp {
+    width: 100%;
+    height: 48px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D1D1D3;
+    background: #F6F6F6;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24.48px;
+ }
+
+ .categ__botom-search {
+    position: relative;
+ }
+
+.categoria_one-brand h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.48px;
+    color: #171B24;
+}

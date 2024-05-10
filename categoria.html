@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stroyka-store - Магазин стройматериалов</title>
-    <!-- cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css'>
-
 
     <link rel="stylesheet" href="./assets/styles/default.css" />
     <link rel="stylesheet" href="./assets/styles/brand.css" />
@@ -17,7 +12,10 @@
     <link rel="stylesheet" href="./assets/styles/categoria.css">
 
 
-    
+    <!-- jquery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
     <!-- box-icons -->
     <link
@@ -159,7 +157,26 @@
         <h1 class="categoria-h2">Сухие смеси</h1>
       </div>
 
-      <div class="categoria_main"></div>
+      <div class="categoria_main">
+        <div class="categoria_main-one">
+          <div class="categoria_one-header">
+            <h3>Цена</h3> <br>
+            <div class="categoria_one-inp">
+              <input type="text" id="minPrice" class="sliderInput" value="0">
+              <input type="text" id="maxPrice" class="sliderInput" value="100000">
+            </div> <br> 
+            <div id="priceRange"></div>
+        </div> <br> <br> 
+        <div class="categoria_one-brand">
+          <h3>Бренд</h3> <br>
+          <div class="categ__botom-search">
+            <input type="text" class="categ-header__inp" placeholder="Поиск" />
+            <button class="header__search"><i class="bx bx-search"></i></button>
+          </div>
+        </div>
+        </div>
+        <div class="categoria_main-two"></div>
+      </div>
     </main>
 
     <footer>
@@ -201,20 +218,64 @@
       </div>
       <div id="notification-container" class="notification-container"></div>
    
+      <script>
 
-    <!-- cdn -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script><script  src="./script.js"></script>
-  
-    <script src="./assets/script/script.js"></script>
-    <script>
-      $(".multiple-items").slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3
-    });
-    </script>
+$( function() {
+            var minPriceInput = $("#minPrice");
+            var maxPriceInput = $("#maxPrice");
+
+            $("#priceRange").slider({
+                range: true,
+                min: 0,
+                max: 3000,
+                values: [ 0, 3000 ],
+                slide: function( event, ui ) {
+                    $("#priceRangeValue").html("Цена: " + ui.values[ 0 ] + " - " + ui.values[ 1 ]);
+                    minPriceInput.val(ui.values[ 0 ]);
+                    maxPriceInput.val(ui.values[ 1 ]);
+                },
+                stop: function( event, ui ) {
+                    filterByPrice(ui.values[0], ui.values[1]);
+                }
+            });
+
+            minPriceInput.change(function() {
+                var minValue = parseInt($(this).val());
+                var maxValue = parseInt(maxPriceInput.val());
+                $("#priceRange").slider("values", 0, minValue);
+                filterByPrice(minValue, maxValue);
+            });
+
+            maxPriceInput.change(function() {
+                var minValue = parseInt(minPriceInput.val());
+                var maxValue = parseInt($(this).val());
+                $("#priceRange").slider("values", 1, maxValue);
+                filterByPrice(minValue, maxValue);
+            });
+
+            $("#priceRangeValue").html("Цена: " + $("#priceRange").slider("values", 0 ) +
+                " - " + $("#priceRange").slider("values", 1 ));
+        });
+
+        function filterByPrice(minPrice, maxPrice) {
+            var filteredProducts = products.filter(function(product) {
+                return product.price >= minPrice && product.price <= maxPrice;
+            });
+            displayProducts(filteredProducts);
+        }
+
+        function displayProducts(productsToShow) {
+            var container = document.getElementById("productsContainer");
+            container.innerHTML = ""; 
+            productsToShow.forEach(function(product) {
+                var productDiv = document.createElement("div");
+                productDiv.className = "product";
+                productDiv.textContent = `${product.name} - Цена: ${product.price}, Популярность: ${product.popularity}`;
+                container.appendChild(productDiv);
+            });
+        }
+
+        displayProducts(products);
+      </script>
   </body>
 </html>
