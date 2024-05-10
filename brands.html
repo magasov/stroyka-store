@@ -27,18 +27,18 @@
       <div class="form__popup-main">
         <div class="inp__main-div">
           <p class="inp_maon-p">E-mail</p>
-          <input type="text" placeholder="youmail@mail.com" name="name" id="popupName"> <br>
+          <input id="loginUsername" type="text" placeholder="youmail@mail.com" name="name" id="popupName"> <br>
         </div>
         <div class="inp__main-div2">
           <p class="inp_maon-p">Пароль</p>
-          <input type="password" placeholder="****************" name="password" id="popupPassword">
+          <input id="loginPassword" type="password" placeholder="****************" name="password" id="popupPassword">
           <a href="#" class="inp_maon-a">Забыли пароль?</a>
       </div>
       </div>
       <div class="form__popup-footer">
         <div>
-          <button class="form__popup-btn" type="submit">Войти</button>
-          <button onclick="signUp()" class="form__popup-btn form_regist" type="submit">Создать учетную запись</button>
+          <button onclick="login()" class="form__popup-btn">Войти</button> <br>
+          <div onclick="signUp()" class="form__popup-btn form_regist">Создать учетную запись</div>
         </div>
       </div>
     </form>
@@ -49,75 +49,78 @@
         <div class="form__sign1">
           <div class="inp__main-div">
             <p class="inp_maon-p">Имя</p>
-            <input type="text" placeholder="Богдан" class="inp__main-sign" name="name" id="popupName"> <br>
+            <input id="registerUsername" type="text" placeholder="Богдан" class="inp__main-sign" name="name" id="popupName"> <br>
           </div>
           <div class="inp__main-div">
             <p class="inp_maon-p">E-mail</p>
-            <input type="email" placeholder="youmail@mail.com" class="inp__main-sign" name="name" id="popupName"> <br>
+            <input type="email" id="registerEmail" placeholder="youmail@mail.com" class="inp__main-sign" name="name" id="popupName"> <br>
           </div>
         </div><br>
         <div class="form__sign1">
           <div class="inp__main-div">
             <p class="inp_maon-p">Новый пароль</p>
-            <input type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
+            <input id="registerPassword" type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
           </div>
           <div class="inp__main-div">
             <p class="inp_maon-p">Подтверждение пароля</p>
-            <input type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
+            <input id="confirmPassword" type="password" placeholder="****************" class="inp__main-sign" name="name" id="popupName"> <br>
           </div>
         </div>
       </div> <br> <br> 
-        <button class="signUp-popup">Зарегистрироваться</button>
+        <button onclick="register()" class="signUp-popup">Зарегистрироваться</button>
     </form>
   </section>
-      <header>
-        <div class="header__one">
-          <a href="#" class="header__map"
-            ><i class="bx bx-map"></i><span class="header__span">Москва</span></a
-          >
+  <header>
+    <div class="header__one">
+      <a href="#" class="header__map"
+        ><i class="bx bx-map"></i><span class="header__span">Москва</span></a
+      >
+    </div>
+    <nav class="header__nav">
+      <a href="brands.html">Бренды</a>
+      <a href="#">Доставка</a>
+      <a href="vozvrat.html">Возврат</a>
+      <a href="#">Документация</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </header>
+
+  <div class="header">
+    <div class="header__navbar">
+      <div class="header__main-one">
+        <a href="#"><img src="./assets/images/home/Logo.svg" alt="Logo" /></a>
+
+        <a
+            href="#"
+            class="catalog__btn-header"
+            onclick="toggleCategories()"
+        >
+            <i class="bx bx-menu-alt-left header__btn-catalog"></i>Каталог
+        </a>
+
+
+      </div>
+
+      <div class="header__botom-search">
+        <input type="text" class="header__inp" placeholder="Поиск" />
+        <button class="header__search"><i class="bx bx-search"></i></button>
+      </div>
+      <div class="header__nav-bar">
+        <div class="header__nav-bar1">
+          <a href="#" onclick="popupBlock()"><i class="bx bx-user header_nav-ic"></i></a>
+          <div><button id="loginRegisterButton" >Профиль</button> <button id="logoutButton" onclick="logout()" style="display: none;">Выйти</button></div>
+          
         </div>
-        <nav class="header__nav">
-          <a href="#">Бренды</a>
-          <a href="#">Доставка</a>
-          <a href="#">Возврат</a>
-          <a href="#">Документация</a>
-          <a href="#">Контакты</a>
-        </nav>
-      </header>
-  
-      <div class="header">
-        <div class="header__navbar">
-          <div class="header__main-one">
-            <a href="index.html"><img src="./assets/images/home/Logo.svg" alt="Logo" /></a>
-  
-            <a
-              href="#"
-              class="catalog__btn-header"
-              onclick="toggleCategories()"
-          >
-              <i class="bx bx-menu-alt-left header__btn-catalog"></i>Каталог
-          </a>
-          </div>
-  
-          <div class="header__botom-search">
-            <input type="text" class="header__inp" placeholder="Поиск" />
-            <button class="header__search"><i class="bx bx-search"></i></button>
-          </div>
-          <div class="header__nav-bar">
-            <div class="header__nav-bar1" onclick="popupBlock()">
-              <a href="#"><i class="bx bx-user header_nav-ic"></i></a>
-              <div>Профиль</div>
-            </div>
-            <div class="header__nav-bar1">
-              <a href="#"><i class="bx bx-cube header_nav-ic"></i></a>
-              <div>Заказы</div>
-            </div>
-            <div class="header__nav-bar1">
-              <a href="#"><i class="bx bx-cart header_nav-ic"></i></a>
-              <div>Корзина</div>
-            </div>
-          </div>
+        <div class="header__nav-bar1">
+          <a href="#"><i class="bx bx-cube header_nav-ic"></i></a>
+          <div>Заказы</div>
         </div>
+        <a href="cat.html" class="header__nav-bar1">
+          <div><i class="bx bx-cart header_nav-ic"></i></div>
+          <div>Корзина</div>
+        </a>
+      </div>
+    </div>
   
         <div class="header__navbar-two">
           <nav class="navbar_header">
