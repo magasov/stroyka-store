@@ -1214,9 +1214,12 @@ footer {
     }
     .reviews {
         padding: 0;
-        height: 300px;
+        display: none;
     }
     footer {
         display: none;
+    }
+    .about {
+        height: 300px;
     }
 }
