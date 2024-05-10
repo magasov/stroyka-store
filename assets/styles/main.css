@@ -664,8 +664,10 @@ article img {
 }
 
 .aktsia__main-one {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
 }
 
 .aktsia__main-one1 {
