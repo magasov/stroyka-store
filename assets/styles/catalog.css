@@ -96,4 +96,10 @@
     font-weight: 500;
     line-height: 24px;
     margin: 3px 0;
+    transition: all .3s ease
+}
+
+.navbarCat a:hover {
+    transform: translateX(10px);
+    transition: all .3s ease;
 }
