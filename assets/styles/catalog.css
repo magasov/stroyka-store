@@ -1,0 +1,100 @@
+#categories {
+    font-family: "Manrope", sans-serif;
+}
+
+.catalog__header {
+    margin: 40px 0;
+    padding: 30px 8%;
+    width: 100%;
+    height: 232px;
+    background: url(../images/catalog/catalog_banner.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.catalog__header p {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.catalog__header p a {
+    text-decoration: none;
+    color: #454950;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.catalog__header h1 {
+    font-size: 48px;
+    color: #171B24;
+    line-height: 70.6px;
+    font-weight: 700;
+}
+
+.catalog__header-two {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.catalog__header-two a {
+    text-decoration: none;
+    color: #171B24;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24.48px;
+    margin: 5px 0;
+    padding: 8px;
+    transition: all .3s ease;
+    border: 1px solid #D1D1D3;
+}
+
+.akson {
+    background: #FBE303;
+}
+
+.catalog__header-two a:hover {
+    background: #FBE303;
+    transition: all .3s ease;
+}
+
+.catalog__header-two a:focus {
+    background: #FBE303;
+    transition: all .3s ease;
+}
+
+.categ-main-grid {
+    width: 100%;
+    padding: 20px 8%;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.categ-main-grid div {
+    width: 278px;
+    height: 476px;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.navbarCat {
+    height: 278px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbarCat a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #2F323A;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 3px 0;
+}
