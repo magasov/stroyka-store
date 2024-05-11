@@ -107,6 +107,15 @@ function filterByPrice(minPrice, maxPrice) {
     });
     displayProducts(filteredProducts);
 }
+
+function filterByName(query) {
+    query = query.toLowerCase();
+    var filteredProducts = products1.filter(function (product) {
+        return product.name.toLowerCase().includes(query);
+    });
+    displayProducts(filteredProducts);
+}
+
 function addToCart(name, price, image) {
     var container = document.getElementById("notification-container");
     var notification = document.createElement("div");
@@ -136,6 +145,7 @@ function addToCart(name, price, image) {
 $(function () {
     var minPriceInput = $("#minPrice");
     var maxPriceInput = $("#maxPrice");
+    var searchInput = $("#search");
 
     $("#priceRange").slider({
         range: true,
@@ -164,6 +174,11 @@ $(function () {
         var maxValue = parseInt($(this).val());
         $("#priceRange").slider("values", 1, maxValue);
         filterByPrice(minValue, maxValue);
+    });
+
+    searchInput.on('input', function () {
+        var query = $(this).val();
+        filterByName(query);
     });
 
     $("#priceRangeValue").html("Price: " + $("#priceRange").slider("values", 0) +

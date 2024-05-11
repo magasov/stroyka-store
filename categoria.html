@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="./assets/styles/categoria.css">
 
 
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <!-- jquery -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -170,7 +176,7 @@
         <div class="categoria_one-brand">
           <h3>Бренд</h3> <br>
           <div class="categ__botom-search">
-            <input type="text" class="categ-header__inp" placeholder="Поиск" />
+            <input type="text" class="categ-header__inp" id="search" placeholder="Поиск" />
             <button class="header__search"><i class="bx bx-search"></i></button>
           </div>
         </div> <br>
@@ -202,6 +208,8 @@
         </div>
        
         <div class="m">
+          <div class="product__header-two">
+        </div>
           <div id="products-container"></div>
         </div>
       </div>
@@ -245,6 +253,5 @@
         Товар добавлен в корзину!
       </div>
       <div id="notification-container" class="notification-container"></div>
-      <script src="./assets/script/backend/categ.js"></script>
   </body>
 </html>
