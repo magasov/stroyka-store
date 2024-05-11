@@ -845,6 +845,12 @@ article img {
     height: 20px;
 }
 
+
+.btn-categ a {
+    text-decoration: none;
+    color: #171B24;
+}
+
 footer {
     width: 100%;
     height: 285px;

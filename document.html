@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Документация</title>
+    <link rel="stylesheet" href="./assets/styles/default.css" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./assets/styles/document.css">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/product-home/image 42 (Traced).svg"
+      type="image/x-icon"
+    />
+
+    <!-- box-icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+</head>
+<body>
+    <section id="popup" class="popup" style="display: none">
+        <div class="close__header-ic" onclick="popupClose()">
+          <img src="assets/images/home/close.png" />
+        </div>
+        <form class="form__popup">
+          <div class="popup__form-top">
+            <h2 class="popup__title login">Войти</h2>
+            <h2 class="popup__title register">Регистрация</h2>
+          </div>
+          <div class="form__main">
+            <input
+              type="text"
+              placeholder="Логин"
+              class="login_header login-input"
+            />
+            <br />
+            <input
+              type="email"
+              placeholder="Email"
+              class="login_header register-input"
+              style="display: none"
+            />
+            <br />
+            <input type="password" class="login_header" placeholder="Пароль" />
+            <br />
+            <button class="poppup_btn">Войти</button>
+          </div>
+        </form>
+      </section>
+      <header>
+        <div class="header__one">
+          <a href="#" class="header__map"
+            ><i class="bx bx-map"></i><span class="header__span">Москва</span></a
+          >
+        </div>
+        <nav class="header__nav">
+          <a href="brands.html">Бренды</a>
+          <a href="dostavka.html">Доставка</a>
+          <a href="vozvrat.html">Возврат</a>
+          <a href="document.html">Документация</a>
+          <a href="contact.html">Контакты</a>
+        </nav>
+      </header>
+  
+      <div class="header">
+        <div class="header__navbar">
+          <div class="header__main-one">
+            <a href="#"><img src="./assets/images/home/Logo.svg" alt="Logo" /></a>
+  
+            <a
+              href="#"
+              class="catalog__btn-header"
+              onmouseover="showCategories()"
+              onmouseout="hideCategories()"
+            >
+              <i class="bx bx-menu-alt-left header__btn-catalog"></i>Каталог
+            </a>
+          </div>
+  
+          <div class="header__botom-search">
+            <input type="text" class="header__inp" placeholder="Поиск" />
+            <button class="header__search"><i class="bx bx-search"></i></button>
+          </div>
+          <div class="header__nav-bar">
+            <div class="header__nav-bar1" onclick="popupBlock()">
+              <a href="#"><i class="bx bx-user header_nav-ic"></i></a>
+              <div>Профиль</div>
+            </div>
+            <div class="header__nav-bar1">
+              <a href="#"><i class="bx bx-cube header_nav-ic"></i></a>
+              <div>Заказы</div>
+            </div>
+            <div class="header__nav-bar1">
+              <a href="#"><i class="bx bx-cart header_nav-ic"></i></a>
+              <div>Корзина</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="header__navbar-two">
+          <nav class="navbar_header">
+            <a href="#">Акции</a>
+            <a href="#">Строительные материалы</a>
+            <a href="#">Керамическая плитка</a>
+            <a href="#">Краски</a>
+            <a href="#">Сантехника</a>
+            <a href="#">Напольные покрытия</a>
+            <a href="#">Инструменты</a>
+            <a href="#">Обои</a>
+            <a href="#">Окна</a>
+          </nav>
+        </div>
+      </div>
+      
+      <main>
+        <div class="main__per">
+          <a href="./index.html ">Главная</a>
+          →
+          <a href="#">Документация</a>
+        </div>
+        <div class="container">
+            <p class="span">Документация</p>
+            <div class="main__container">
+                <div class="block__info">
+                  <div class="info_1">
+                    <div class="info_bk_1">
+                      <div class="bk_img_1"></div>
+                    </div>
+                    <div class="info_bk_2">
+                      <div class="bk_text">
+                        <h3>Оферта «Безопасная сделка»</h3>
+                        <section>PDF · 10 МБ</section>
+                        <a href="./assets/pdf/bezopas.pdf" download="безопасная сделка"><button class="btn_info">Скачать</button></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info_2">
+                    <div class="info_bk_1">
+                      <div class="bk_img_2"></div>
+                    </div>
+                    <div class="info_bk_2">
+                      <div class="bk_text">
+                        <h3>Политика конфиденциальности </h3>
+                        <section>PDF · 10 МБ</section>
+                        <a href="./assets/pdf/bezopas.pdf" download="безопасная сделка"><button class="btn_info">Скачать</button></a>
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="info_3">
+                    <div class="info_bk_1">
+                      <div class="bk_img_3"></div>
+                    </div>
+                    <div class="info_bk_2">
+                      <div class="bk_text">
+                        <h3>Оферта доставки</h3>
+                        <section>PDF · 10 МБ</section>
+                        <a href="./assets/pdf/bezopas.pdf" download="безопасная сделка"><button class="btn_info">Скачать</button></a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer__one">
+          <nav class="footer__nav">
+            <a href="#" class="logo"><img src="./assets/images/home/footer.png" alt="Logo" /></a>
+            <a href="#" class="icon__footer"><i class='bx bx-envelope map__footer'></i> info@stroykastore.ru</a>
+            <a href="#" class="icon__footer"><i class='bx bxs-map map__footer' ></i> Москва, ул. Камушкина 10</a>
+          </nav>
+          <nav class="footer__nav">
+            <a href="#">Личный кабинет</a>
+            <a href="#">Заказы</a>
+            <a href="#">Избранное</a>
+            <a href="#">Корзина</a>
+          </nav>
+          <nav class="footer__nav">
+            <a href="#">Каталог</a>
+            <a href="#">Акции</a>
+            <a href="#">Бренды</a>
+            <a href="#">Контакты</a>
+          </nav>
+          <nav class="footer__nav">
+            <a href="#">Стать продавцом</a>
+            <a href="#">Доставка</a>
+            <a href="#">Возврат</a>
+            <a href="#">Документация</a>
+          </nav>
+        </div>
+        <div class="footer__two">
+          <div class="h2">© СтройкаСтор</div>
+          <img src="./assets/images/home/footer_visa.png" alt="img">
+          <div>Cделано в IThub 1п1</div>
+        </div>
+      </footer>
+</body>
+</html>

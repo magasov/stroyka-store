@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stroyka-store - Магазин стройматериалов</title>
+    <!-- cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css'>
+    <link rel="stylesheet" href="./assets/styles/contact.css">
 
     <link rel="stylesheet" href="./assets/styles/default.css" />
     <link rel="stylesheet" href="./assets/styles/brand.css" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="shortcut icon" href="./assets/images/favicion/fav.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/styles/categoria.css">
 
 
-    <!-- jquery -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
 
     <!-- box-icons -->
     <link
@@ -84,10 +85,10 @@
       </div>
       <nav class="header__nav">
         <a href="brands.html">Бренды</a>
-        <a href="#">Доставка</a>
+        <a href="dostavka.html">Доставка</a>
         <a href="vozvrat.html">Возврат</a>
-        <a href="#">Документация</a>
-        <a href="#">Контакты</a>
+        <a href="document.html">Документация</a>
+        <a href="contact.html">Контакты</a>
       </nav>
     </header>
 
@@ -142,109 +143,5 @@
         </nav>
       </div>
     </div>
-
-    <main>
-      <div class="categoria_header">
-        <div class="categoria_header-a">
-          <a href="index.html">Главная</a>
-          <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
-          <a href="catalog.html">Каталог</a>
-          <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
-          <a href="#">Стройматериалы</a>
-          <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
-          <a href="#">Сухие смеси</a>
-        </div> <br>
-        <h1 class="categoria-h2">Сухие смеси</h1>
-      </div>
-
-      <div class="categoria_main">
-        <div class="categoria_main-one">
-          <div class="categoria_one-header"> 
-            <h3>Цена</h3> <br>
-            <div class="categoria_one-inp">
-              <input type="text" id="minPrice" class="sliderInput" value="0">
-              <input type="text" id="maxPrice" class="sliderInput" value="3000">
-            </div> <br> 
-            <div id="priceRange"></div>
-        </div> <br> <br> 
-        <div class="categoria_one-brand">
-          <h3>Бренд</h3> <br>
-          <div class="categ__botom-search">
-            <input type="text" class="categ-header__inp" placeholder="Поиск" />
-            <button class="header__search"><i class="bx bx-search"></i></button>
-          </div>
-        </div> <br>
-          <div class="brand-categ-checkbox">
-            <div><input type="checkbox"><p>Braer</p></div>
-            <div><input type="checkbox"><p>Mstera</p></div>
-            <div><input type="checkbox"><p>Euroblock</p></div>
-            <div><input type="checkbox"><p>Гален</p></div>
-            <div><input type="checkbox"><p>ЛСР</p></div>
-            <div><input type="checkbox"><p>Decra</p></div>
-            <div><input type="checkbox"><p>Braer</p></div>
-            <div><input type="checkbox"><p>Mstera</p></div>
-            <div><input type="checkbox"><p>Euroblock</p></div>
-            <div><input type="checkbox"><p>Гален</p></div>
-            <div><input type="checkbox"><p>ЛСР</p></div>
-            <div><input type="checkbox"><p>Decra</p></div>
-          </div> <br> <br>
-          <div class="categoria_one-brand">
-            <h3>Поставщик</h3> <br>
-            <div class="categ__botom-search">
-              <input type="text" class="categ-header__inp" placeholder="Аксон" />
-              <button class="header__search"><i class='bx bx-arrow-to-bottom'></i></button>
-            </div>
-          </div> <br> <br>
-          <div class="categoria_btn">
-            <a href="#" class="categoria_btn-href">Применить</a>
-            <a href="#" class="categoria_btn-href categoria_btn-sbros">Сбросить</a>
-          </div>
-        </div>
-       
-        <div class="m">
-          <div id="products-container"></div>
-        </div>
-      </div>
-    </main>
-
-    <footer>
-      <div class="footer__one">
-        <nav class="footer__nav">
-          <a href="#" class="logo"><img src="./assets/images/home/footer.png" alt="Logo" /></a>
-          <a href="#" class="icon__footer"><i class='bx bx-envelope map__footer'></i> info@stroykastore.ru</a>
-          <a href="#" class="icon__footer"><i class='bx bxs-map map__footer' ></i> Москва, ул. Камушкина 10</a>
-        </nav>
-        <nav class="footer__nav">
-          <a href="#">Личный кабинет</a>
-          <a href="#">Заказы</a>
-          <a href="#">Избранное</a>
-          <a href="#">Корзина</a>
-        </nav>
-        <nav class="footer__nav">
-          <a href="#">Каталог</a>
-          <a href="#">Акции</a>
-          <a href="#">Бренды</a>
-          <a href="#">Контакты</a>
-        </nav>
-        <nav class="footer__nav">
-          <a href="#">Стать продавцом</a>
-          <a href="#">Доставка</a>
-          <a href="#">Возврат</a>
-          <a href="#">Документация</a>
-        </nav>
-      </div>
-      <div class="footer__two">
-        <div class="h2">© СтройкаСтор</div>
-        <img src="./assets/images/home/footer_visa.png" alt="img">
-        <div>Cделано в IThub 1п1</div>
-      </div>
-    </footer>
-    <script src="./assets/script/popup.js"></script>
-    <script src="./assets/script/backend/categ.js"></script>
-      <div id="notification" class="notification">
-        Товар добавлен в корзину!
-      </div>
-      <div id="notification-container" class="notification-container"></div>
-      <script src="./assets/script/backend/categ.js"></script>
   </body>
 </html>
