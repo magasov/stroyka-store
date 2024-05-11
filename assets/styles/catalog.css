@@ -77,7 +77,6 @@
 .categ-main-grid div {
     width: 278px;
     height: 476px;
-    background: red;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
