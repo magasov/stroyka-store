@@ -89,7 +89,7 @@ function displayProducts(products) {
     products.forEach(product => {
         let productHTML = `
             <div class="product">
-                <img src="${product.image}" alt="${product.name}">
+                <a href="product.html"><img src="${product.image}" alt="${product.name}"></a>
                 <div class="product__info">
                     <h3>${product.name}</h3>
                     <p>${product.price} </p>
