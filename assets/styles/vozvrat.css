@@ -22,7 +22,6 @@
 }
 
 .p{
-    font-family: Manrope;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -31,7 +30,6 @@
 }
 
 .h1{
-    font-family: Manrope;
     font-size: 48px;
     font-weight: 700;
     line-height: 57.6px;
@@ -40,7 +38,6 @@
 }
 
 .p1{
-    font-family: Inter;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -49,20 +46,30 @@
 
 .c{
     padding-left: 85px;
+    width: 100%;
 }
 
-.conteiner-text{
+.container2{
     display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-top: 44px;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
 }
 
-.text-vozvrat{
-    padding-left: 150px;
-    font-size: 34px;
-}
-
-.description{
+.h2{
+    margin-left: 0;
     
+}
+.info-title{
+    width: 434px;
+    text-align: left;
+    font-size: 34px;
+    
+    
+}
+.info-p {
+    max-width: 768px;
+    margin-left: 407px;
+    font-size: 16px;
 }
