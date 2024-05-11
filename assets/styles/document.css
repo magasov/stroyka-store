@@ -2,6 +2,7 @@ main{
     width: 100%;
     padding: 0 8%;
     margin-top: 50px;
+    margin-bottom: 58px;
 }
 
 .main__per a{
@@ -33,8 +34,8 @@ text-align: left;
 }
 .info_2{
     border: 1px solid #E8E9EA;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .info_3{
     border: 1px solid #E8E9EA;
