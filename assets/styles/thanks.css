@@ -1,0 +1,41 @@
+main {
+    width: 100%;
+    height: 80vh;
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main {
+    width: 572px;
+    height: 342px;
+    border: 1px solid #D1D1D3;
+    text-align: center;
+    display: flex;
+    padding: 40px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.main h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+}
+.main p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24.48px;
+}
+.main a {
+    width: 213px;
+    height: 48px;
+    background: #FCEC41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24.48px;
+    color: #171B24;    
+}
