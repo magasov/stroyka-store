@@ -203,102 +203,128 @@
       </footer>
 
       <script>
-        fetch('/getCartItems')
-            .then(response => response.json())
-            .then(cartItems => {
-                const cartItemsDiv = document.getElementById('cart-items');
-                const totalPriceDiv = document.getElementById('total-price');
-                const totalItemsDiv = document.getElementById('total-items');
-                let totalPrice = 0;
-                let totalItems = 0;
-    
-                cartItems.forEach(item => {
-                    const itemDiv = document.createElement('div');
-                    itemDiv.classList.add('cat__product');
-                    const image = document.createElement('img');
-                    image.src = item.image;
-    
-                    image.onerror = function() {
-                        console.error('Ошибка загрузки изображения для товара:', item.name);
-                    };
-    
-                    const productInfo = document.createElement('div');
-                    const productInfo2 = document.createElement('div');
-                    productInfo.classList.add('cat-info');
-                    productInfo2.classList.add('cat-info2');
-                    productInfo.innerHTML = `<h3>${item.name}</h3>`;
-                    const productPrice = document.createElement('div');
-                    productPrice.classList.add('product-price');
-                    productPrice.textContent = item.price;
-                    
-                    const contentKod = document.createElement('div')
-                    contentKod.classList.add('contentKod')
-                    contentKod.textContent = 'Код товара: 34078988-0047'
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItemsDiv = document.getElementById('cart-items');
+            const totalPriceDiv = document.getElementById('total-price');
+            const totalItemsDiv = document.getElementById('total-items');
 
-                    const deleteButton = document.createElement('button');
-                    deleteButton.classList.add('delete__btn')
-                    deleteButton.textContent = 'Удалить товар';
-                    deleteButton.addEventListener('click', function() {
-                        itemDiv.remove();
-                        totalPrice -= parseFloat(item.price);
-                        totalItems--;
-                        totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
-                        totalItemsDiv.textContent = `Количество товара: ${totalItems}`;
-                    });
-    
-                    const counterDiv = document.createElement('div');
-                    counterDiv.classList.add('counter');
-                    const plusButton = document.createElement('button');
-                    plusButton.textContent = '+';
-                    const minusButton = document.createElement('button');
-                    minusButton.textContent = '-';
-                    const quantitySpan = document.createElement('span');
-                    quantitySpan.textContent = '1'; 
-    
-                    plusButton.addEventListener('click', function() {
-                        let quantity = parseInt(quantitySpan.textContent);
-                        quantity++;
-                        quantitySpan.textContent = quantity;
-                        totalPrice += parseFloat(item.price);
-                        totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
-                    });
-    
-                    minusButton.addEventListener('click', function() {
-                        let quantity = parseInt(quantitySpan.textContent);
-                        if (quantity > 1) {
-                            quantity--;
-                            quantitySpan.textContent = quantity;
+            fetch('/getCartItems')
+                .then(response => response.json())
+                .then(cartItems => {
+                    let totalPrice = 0;
+                    let totalItems = 0;
+
+                    cartItems.forEach(item => {
+                        const itemDiv = document.createElement('div');
+                        itemDiv.classList.add('cat__product');
+                        const image = document.createElement('img');
+                        image.src = item.image;
+
+                        image.onerror = function () {
+                            console.error('Ошибка загрузки изображения для товара:', item.name);
+                        };
+
+                        const productInfo = document.createElement('div');
+                        const productInfo2 = document.createElement('div');
+                        productInfo.classList.add('cat-info');
+                        productInfo2.classList.add('cat-info2');
+                        productInfo.innerHTML = `<h3>${item.name}</h3>`;
+                        const productPrice = document.createElement('div');
+                        productPrice.classList.add('product-price');
+                        productPrice.textContent = item.price;
+
+                        const contentKod = document.createElement('div');
+                        contentKod.classList.add('contentKod');
+                        contentKod.textContent = 'Код товара: 34078988-0047';
+
+                        const deleteButton = document.createElement('button');
+                        deleteButton.classList.add('delete__btn');
+                        deleteButton.textContent = 'Удалить товар';
+                        deleteButton.addEventListener('click', function () {
+                            itemDiv.remove();
                             totalPrice -= parseFloat(item.price);
+                            totalItems--;
                             totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
-                        }
+                            totalItemsDiv.textContent = `Количество товара: ${totalItems}`;
+                        });
+
+                        const counterDiv = document.createElement('div');
+                        counterDiv.classList.add('counter');
+                        const plusButton = document.createElement('button');
+                        plusButton.textContent = '+';
+                        const minusButton = document.createElement('button');
+                        minusButton.textContent = '-';
+                        const quantitySpan = document.createElement('span');
+                        quantitySpan.textContent = '1';
+
+                        plusButton.addEventListener('click', function () {
+                            let quantity = parseInt(quantitySpan.textContent);
+                            quantity++;
+                            quantitySpan.textContent = quantity;
+                            totalPrice += parseFloat(item.price);
+                            totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
+                        });
+
+                        minusButton.addEventListener('click', function () {
+                            let quantity = parseInt(quantitySpan.textContent);
+                            if (quantity > 1) {
+                                quantity--;
+                                quantitySpan.textContent = quantity;
+                                totalPrice -= parseFloat(item.price);
+                                totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
+                            }
+                        });
+
+                        counterDiv.appendChild(minusButton);
+                        counterDiv.appendChild(quantitySpan);
+                        counterDiv.appendChild(plusButton);
+
+                        productInfo.appendChild(productPrice);
+                        productInfo2.appendChild(contentKod);
+                        productInfo2.appendChild(deleteButton);
+                        productInfo.appendChild(counterDiv);
+
+                        itemDiv.appendChild(image);
+                        itemDiv.appendChild(productInfo);
+                        itemDiv.appendChild(productInfo2);
+                        cartItemsDiv.appendChild(itemDiv);
+
+                        totalPrice += parseFloat(item.price);
+                        totalItems++;
                     });
-    
-                    
-                    counterDiv.appendChild(minusButton);
-                    counterDiv.appendChild(quantitySpan);
-                    counterDiv.appendChild(plusButton);
-    
-                    productInfo.appendChild(productPrice);
-                    productInfo2.appendChild(contentKod); 
-                    productInfo2.appendChild(deleteButton); 
-                    productInfo.appendChild(counterDiv);
-    
-                    itemDiv.appendChild(image);
-                    itemDiv.appendChild(productInfo);
-                    itemDiv.appendChild(productInfo2);
-                    cartItemsDiv.appendChild(itemDiv);
-    
-                    totalPrice += parseFloat(item.price);
-                    totalItems++;
+
+                    totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
+                    totalItemsDiv.textContent = `Количество товара: ${totalItems}`;
+                })
+                .catch(error => {
+                    console.error('Ошибка при получении данных о товарах в корзине:', error);
                 });
-    
-                totalPriceDiv.textContent = `Товаров на сумму: ${totalPrice.toFixed(2)} ₽`;
-                totalItemsDiv.textContent = `Количество товара: ${totalItems}`;
-            })
-            .catch(error => {
-                console.error('Ошибка при получении данных о товарах в корзине:', error);
+
+            document.querySelector('.btn_cat').addEventListener('click', () => {
+                fetch('/getCartItems')
+                    .then(response => response.json())
+                    .then(cartItems => {
+                        fetch('/completeOrder', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ items: cartItems })
+                        })
+                            .then(response => response.text())
+                            .then(data => {
+                                console.log(data);
+                                window.location.href = '/orders.html';
+                            })
+                            .catch(error => {
+                                console.error('Ошибка:', error);
+                            });
+                    })
+                    .catch(error => {
+                        console.error('Ошибка при получении данных о товарах в корзине:', error);
+                    });
             });
-            
+        });
     </script>
     
     

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказы</title>
+</head>
+<body>
+    <h1>Ваши заказы</h1>
+
+    <div id="orders-container">
+        <!-- Здесь будет отображаться информация о заказах -->
+    </div>
+
+    <script>
+        // Функция для отображения информации о заказах
+        function displayOrders(orders) {
+            const ordersContainer = document.getElementById("orders-container");
+
+            // Если нет заказов, выведите соответствующее сообщение
+            if (orders.length === 0) {
+                ordersContainer.innerHTML = "<p>У вас пока нет заказов.</p>";
+                return;
+            }
+
+            // Иначе, создайте HTML-разметку для каждого заказа
+            orders.forEach((order, index) => {
+                const orderElement = document.createElement("div");
+                orderElement.classList.add("order");
+
+                // Добавьте информацию о заказе в HTML-разметку
+                orderElement.innerHTML = `
+                    <h3>Заказ #${index + 1}</h3>
+                    <p>Дата заказа: ${new Date().toLocaleDateString()}</p>
+                    <ul>
+                        ${order.items.map(item => `
+                            <li>
+                                <img src="${item.image}" alt="${item.name}" style="max-width: 100px;">
+                                ${item.name} - ${item.price}
+                            </li>
+                        `).join("")}
+                    </ul>
+                `;
+
+                // Добавьте созданный элемент заказа на страницу
+                ordersContainer.appendChild(orderElement);
+            });
+        }
+        
+        // Загрузите информацию о заказах при загрузке страницы
+        fetch('/orders')
+            .then(response => response.json())
+            .then(orders => {
+                // Вызовите функцию отображения заказов
+                displayOrders(orders);
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+            });
+    </script>
+</body>
+</html>
