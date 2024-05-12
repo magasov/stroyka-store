@@ -1,0 +1,45 @@
+#orders-container {
+    width: 100%;
+    padding: 30px 8%;
+    font-family: "Manrope", sans-serif;
+}
+.order__main-block {
+    width: 100%;
+    border: 1px solid #E8E9EA;
+}
+.order__flex {
+    display: flex;
+    width: 100%;
+}
+.order_justify {
+    display: flex;
+    width: 70%;
+    border-right: 1px solid #E8E9EA;
+}
+.order_justify img {
+    border-right: 1px solid #E8E9EA;
+}
+.order_nav {
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.h3{
+    color: #2F323A;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #171B24;
+}
+.order_justify-two {
+    width: 30%;
+    display: flex;
+    padding: 30px 15px;
+    column-gap: 30px;
+}
