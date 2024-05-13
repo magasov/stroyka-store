@@ -1109,7 +1109,12 @@ footer {
     width: 32px;
     height: 24px;
 }
-
+.span{
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: left;
+    }
 /* iPhone 12, 12 Pro, 13, 13 Pro (портретный режим) */
 @media (max-width: 390px) {
 	header {
