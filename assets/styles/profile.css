@@ -15,4 +15,19 @@ main{
 }
 .block_main{
     display: flex;
+    padding: 10px 0 ;
+}
+.block_mail{
+    width: 696px;
+    height: 48px;
+    
+    gap: 8px;
+    border: 0px 0px 1px 0px;
+}
+.block_btn{
+    width: 143px;
+    height: 48px;
+    padding: 12px 24px 12px 24px;
+    gap: 8px;
+    background: #FCEC41;
 }
