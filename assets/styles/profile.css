@@ -1,6 +1,6 @@
 main{
     width: 100%;
-    padding: 0 18%;
+    padding: 0 32%;
     margin-top: 50px;
     margin-bottom: 100px;
 }
@@ -16,11 +16,11 @@ main{
 .block_main{
     display: flex;
     padding: 10px 0 ;
+    width: 100%;
 }
 .block_mail{
     width: 696px;
     height: 48px;
-    
     gap: 8px;
     border: 0px 0px 1px 0px;
 }
@@ -30,4 +30,18 @@ main{
     padding: 12px 24px 12px 24px;
     gap: 8px;
     background: #FCEC41;
+}
+.block_main p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+.btn_fs{
+    width: 100%;
+    padding: 12px 16px 12px 16px;
+    gap: 8px;
+    border: 0px;
+    background: #F6F6F6;
+    border-bottom: 1px solid #D1D1D3;
 }
