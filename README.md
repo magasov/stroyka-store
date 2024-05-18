@@ -7,5 +7,7 @@
 </div> 
 
  
-<!-- просто --> 
- 
+
+ <div align="center" width='100%' >
+<img src="./assets/stroyka-store.gif"/>
+</div> 
